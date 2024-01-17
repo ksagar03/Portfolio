@@ -1,0 +1,12 @@
+.drop{
+    width: 5px;
+    height: 10px;
+    background-color: #1b1b1b; /* Adjust the color as needed */
+    position: absolute;
+    animation: fall linear infinite;
+}
+@keyframes fall{
+    to {
+        transform: translateY(100vh);
+      }
+}
