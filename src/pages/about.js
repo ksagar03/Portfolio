@@ -5,6 +5,7 @@ import React from 'react'
 import Image from 'next/image'
 import profile from "@/../../Portfolio/public/images/profile/profile.jpeg"
 import Skills from '@/components/Skills'
+import Experience from '@/components/Experience'
 
 const About = () => {
   return (
@@ -37,6 +38,7 @@ const About = () => {
         </div>
       </div>
       <Skills/>
+      <Experience/>
 
 
 

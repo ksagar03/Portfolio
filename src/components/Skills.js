@@ -16,11 +16,11 @@ const Skill = ({name, x,y}) => {
     return (
         <motion.div className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark shadow-sm cursor-pointer absolute" whileHover={{scale:1.05}}
         initial ={{x:0, y:0}}
-        animate ={{x:x, y:y,}}
+        whileInView ={{x:x, y:y,}}
         // style={{rotate: rotateangle}}
         // animate = {{}}
-        transition={{duration:1.3, ease:"circOut"}}
-        
+        transition={{duration:1.3,}}
+        viewport={{once:true }}
         >
             {name}
         </motion.div>
