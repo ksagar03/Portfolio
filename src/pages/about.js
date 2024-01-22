@@ -47,7 +47,7 @@ const About = () => {
               </p>
             </motion.div>
             <div className=" col-span-2 relative h-max rounded-2xl border-2 border-solid border-dark bg-white p-5">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[1.5rem] bg-dark " />
+              <div className="absolute top-0 -right-3 -z-10 w-[105%] h-[103%] rounded-[1.5rem] bg-dark " />
               <Image
                 src={profile}
                 alt=""
