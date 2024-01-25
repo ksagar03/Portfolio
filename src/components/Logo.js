@@ -5,8 +5,8 @@ const MotionLink = motion(Link)
 const Logo = () => {
   return (
     <div className="  ">
-      <MotionLink className=" w-14 h-14 mt-2 bg-dark text-light flex items-center justify-center rounded-full text-bold text-xl animate-spin-slow  "  href="/"
-      whileHover={{scale:1.2, backgroundColor:"#443a75",
+      <MotionLink className=" w-14 h-14 mt-2 bg-dark text-light flex items-center justify-center rounded-full text-bold text-xl animate-spin-slow border-2 border-transparent dark:border-light  "  href="/"
+      whileHover={{scale:1.2, backgroundColor:"#C30101",
       transition: {duration:0.3, ease:easeInOut },}}>KS</MotionLink>
     </div>
   )
