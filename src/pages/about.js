@@ -19,9 +19,9 @@ const About = () => {
           content="this page will be telling about my self"
         />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center ">
+      <main className="flex w-full flex-col items-center justify-center dark:text-white ">
         <Layout className="pt-16">
-          <AnimatedText
+          <AnimatedText 
             text="Crafting Code, Building Dreams."
             className="mb-16"
           />
@@ -31,7 +31,7 @@ const About = () => {
              whileInView={{y:0}}
              transition={{duration: 0.7}}
             >
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/80">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/80 dark:text-white/80">
                 About me
               </h2>
               <p className=" font-medium">
@@ -46,12 +46,17 @@ const About = () => {
                 expected experience.
               </p>
             </motion.div>
-            <div className=" col-span-2 relative h-max rounded-2xl border-2 border-solid border-dark bg-white p-5">
-              <div className="absolute top-0 -right-3 -z-10 w-[105%] h-[103%] rounded-[1.5rem] bg-dark " />
+            <div className=" col-span-2 relative h-max rounded-2xl border-2 border-solid border-dark bg-white p-5 dark:border-white dark:bg-dark">
+              <div className="absolute top-0 -right-3 -z-10 w-[105%] h-[103%] rounded-[1.5rem] bg-dark dark:bg-white
+               " />
               <Image
                 src={profile}
                 alt=""
                 className="w-full h-auto rounded-2xl"
+                priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
               />
             </div>
           </div>

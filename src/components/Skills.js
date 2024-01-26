@@ -14,13 +14,13 @@ const Skill = ({name, x,y}) => {
     // },[])
 
     return (
-        <motion.div className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark shadow-sm cursor-pointer absolute"  
-        whileHover={{scale:0.7, transition:0.6}}
+        <motion.div className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark shadow-sm cursor-pointer absolute dark:text-dark dark:shadow-light dark:bg-light "  
+        whileHover={{scale:0.7, transition:{duration:0.3}}}
         initial ={{x:0, y:0}}
-        whileInView ={{x:x, y:y,}}
+        whileInView ={{x:x, y:y, transition:{duration:1.5}}}
         // style={{rotate: rotateangle}}
         // animate = {{}}
-        transition={{duration:1.3,}}
+        // transition={{duration:1.3,}}
         viewport={{once:true }}
         >
             {name}
@@ -37,8 +37,8 @@ const Skills = () => {
     <h2 className=" font-bold text-8xl mt-64 w-full text-center">
         Skills
     </h2>
-    <div className=" w-full h-screen relative flex items-center justify-center rounded-full bg-circularlight">
-        <motion.div className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark shadow-sm cursor-pointer" whileHover={{scale:1.05}} >
+    <div className=" w-full h-screen relative flex items-center justify-center rounded-full bg-circularlight dark:bg-circulardark">
+        <motion.div className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark shadow-sm cursor-pointer dark:bg-light dark:text-dark" whileHover={{scale:1.05}}  >
             Web
         </motion.div>
         <Skill name ="JavaScript"  x="-1vw" y="-9vw" />
@@ -51,9 +51,6 @@ const Skills = () => {
         <Skill name ="GCP"  x="-20vw" y="18vw" />
         <Skill name ="Stripe"  x="-29vw" y="-7vw" />
         <Skill name ="Firebase"  x="30vw" y="2vw" />
-
-
-
 
     </div>
     </>

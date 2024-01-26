@@ -15,20 +15,24 @@ const Projects = () => {
   const FeaturedProjects = ({type,title, summary, img,link, githublink }) => {
 
     return(
-      <article className='w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl p-12 relative rounded-br-2xl'>
-         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+      <article className='w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light'>
+         <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
         <div className='w-1/2 overflow-hidden rounded-lg'>
           <FramerImage src={img} alt={title} className=' w-full h-auto' 
           whileHover={{scale: 1.05}}
           transition={{duration: 0.5}}
+          priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
           />
         </div>
-        <div className='w-1/2 flex flex-col items-start justify-between pl-6 '>
+        <div className='w-1/2 flex flex-col items-start justify-between pl-6  text-dark dark:text-light '>
           <span className=' text-blue-500 font-medium text-xl'>
             {type}
           </span>
             <h2 className='underline underline-offset-[5px] my-2 w-full text-left text-4xl font-bold'>{title}</h2> 
-          <p className='my-2 font-medium text-dark '>
+          <p className='my-2 font-medium '>
             {summary}
           </p>
           <div className=' mt-2 flex items-center '>
@@ -36,7 +40,7 @@ const Projects = () => {
             className=' w-10 hover:animate-pulse'>
               <GitHub sx={{fontSize:"2.3rem"}} />
             </Link>
-            <Link href={link} target='_blank' className='ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500  '>
+            <Link href={link} target='_blank' className='ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:border-light dark:hover:bg-dark    '>
             Visit Project
             </Link>
           </div>
@@ -47,24 +51,27 @@ const Projects = () => {
   }
   const Project =({type, title ,img, link, githublink}) =>{
     return(
-      <article className=' w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl'>
-         <div className="absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+      <article className=' w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl dark:bg-dark dark:border-light'>
+         <div className="absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
         
           <div className='overflow-hidden rounded-lg w-full'>
           <FramerImage src={img} alt={title} className=' w-full h-auto'
           whileHover={{scale: 1.05}}
           transition={{duration:0.5}}
-          
+          priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
           />    
           </div>
-        <div className='w-full flex flex-col items-start justify-between mt-4 '>
+        <div className='w-full flex flex-col items-start justify-between mt-4 dark:text-light '>
           <span className=' text-blue-500 font-medium text-xl'>
             {type}
           </span>
           
             <h2 className='my-2 w-full text-left text-3xl font-bold underline underline-offset-[5px]'>{title}</h2>
           <div className=' mt-2 w-full flex items-center justify-between '>
-          <Link href={link} target='_blank' className=' rounded-xl bg-dark text-light p-1 px-4 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500  '>
+          <Link href={link} target='_blank' className=' rounded-xl bg-dark text-light p-1 px-4 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:border-light dark:hover:bg-dark   '>
             Visit
             </Link>
             <Link href={githublink} target='_blank'

@@ -19,10 +19,10 @@ const Details = ({
   return (
     <li className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
         
-        <figure ref={reference} className="absolute left-0 stroke-dark" >
+        <figure ref={reference} className="absolute left-0 stroke-dark dark:stroke-light" >
             <svg className=" -rotate-90" width={75} height={75} viewBox="0 0 100 100">
                 <motion.circle cx={75} cy={50} r={20} className=" stroke-blue-500 stroke-1 fill-none" />
-                <motion.circle cx={75} cy={50} r={20} className=" stroke-[5px] fill-light "  style={{pathLength:scrollYProgress}} />
+                <motion.circle cx={75} cy={50} r={20} className=" stroke-[5px] fill-light dark:fill-dark "  style={{pathLength:scrollYProgress}} />
                 <motion.circle cx={75} cy={50} r={10} className=" an stroke-1 fill-blue-500 animate-pulse" />
             </svg>
         </figure>
@@ -33,7 +33,7 @@ const Details = ({
         <h3 className=" capitalize font-bold text-2xl ">
           {type}
         </h3>
-        <span className=" capitalize font-medium text-dark/75 ">
+        <span className=" capitalize font-medium text-dark/75 dark:text-light/75 ">
           {time} | {place}
         </span>
         {/* <p className=" font-medium w-full">{info}</p> */}
@@ -56,7 +56,7 @@ const Education = () => {
         Education
       </h2>
       <div ref={ref} className="w-full mx-auto relative">
-        <motion.div style={{scaleY: scrollYProgress}} className=" absolute left-9 top-1 w-[5px] h-full bg-dark origin-top " />
+        <motion.div style={{scaleY: scrollYProgress}} className=" absolute left-9 top-1 w-[5px] h-full bg-dark origin-top dark:bg-light " />
         <ul className="flex flex-col items-start w-full justify-between ml-4 ">
           <Details
             type="Bachelor Of Engineering Electronics and communication"

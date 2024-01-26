@@ -23,9 +23,30 @@ module.exports = {
         'spin-slow': 'spin 8s linear infinite',
       },
       backgroundImage: {
-        "circularlight": "repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);"
+        "circularlight": "repeating-radial-gradient(rgba(27,27,27,0.6) 2px, #f5f5f5 7px, #f5f5f5 100px);",
+        "circulardark":"repeating-radial-gradient(rgba(245,245,245,0.6) 2px, #1b1b1b 7px, #1b1b1b 100px);"
       },
     },
+    screens: {
+      // it will add a media query of max width
+      "2xl": { max: "1535px" },
+    // => @media (max-width: 1535px)
+
+    xl: { max: "1279px" },
+    // => @media (max-width: 1279px)
+
+    lg: { max: "1023px" },
+    // => @media (max-width: 1023px)
+
+    md: { max: "767px" },
+    // => @media (max-width: 767px)
+
+    sm: { max: "639px" },
+    // => @media (max-width: 639px) 
+
+    xs: { max: "479px" },
+    // => @media (max-width: 479px) 
+    }
   },
   plugins: [],
 };

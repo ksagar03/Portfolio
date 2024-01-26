@@ -17,7 +17,14 @@ export default function Home() {
         <Layout className="pt-0">
           <div className=" flex items-center justify-between w-full">
             <div className=" w-1/2">
-              <Image src={profile_pic} alt="" className="w-full h-auto" />
+              <Image src={profile_pic} alt="" className="w-full h-auto"
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+
+              />
+              {/* this priority key will avoid the lazy load, preload the images */}
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText text="Bringing a website to life through coding." />
