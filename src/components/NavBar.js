@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
-import { easeIn, motion } from "framer-motion";
+import { easeIn, easeInOut, motion } from "framer-motion";
 import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
@@ -34,17 +34,21 @@ const NavBar = () => {
 
 
 
-  const CustomMobileLink = ({ href, title, className = "" }) => {
+  const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     // customlink function can't be used for mobile view, as the nextjs link will open the pages in the background and will not close the hamburger menu
-    
+
     const router = useRouter();
+    const handleClick =() => {
+      toggle();
+      router.push(href)
+    }
     return (
-      <button href={href} className={`${className} relative group`}>
+      <button onClick={handleClick} href={href} className={`${className} relative group text-light dark:text-dark my-1 `}>
         {title}
         <span
-          className={`h-[1.5px] inline-block absolute bg-dark left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+          className={`h-[1.5px] inline-block absolute bg-light dark:bg-dark left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300  ${
             router.asPath === href ? "w-full" : "w-0"
-          }  dark:bg-light`}
+          } `}
         ></span>
       </button>
     );
@@ -124,14 +128,18 @@ const NavBar = () => {
 
 
 
+{  hamburgerMenu ? 
 
-      <div className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-32  " >
+      <motion.div className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-24  text-light dark:text-dark "
+      initial ={{scale:0, opacity:0, x:"-50%", y:"-50%"}}
+      animate={{scale:1, opacity:1, transition:{duration:0.3, ease:easeInOut}}}
+      >
         <nav className=" flex flex-col items-center justify-center">
-          <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects " className="ml-4" />
+          <CustomMobileLink href="/" title="Home" className="" toggle={handleClick} />
+          <CustomMobileLink href="/about" title="About" className="" toggle={handleClick} />
+          <CustomMobileLink href="/projects" title="Projects " className="" toggle={handleClick} />
         </nav>
-        <nav className=" flex justify-items-center flex-wrap  ">
+        <nav className=" flex justify-items-center flex-wrap mt-4">
           <MotionLink
             href="/"
             target="_blank"
@@ -162,7 +170,7 @@ const NavBar = () => {
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className=" ml-6 flex items-center justify-end rounded-full border-2 border-dark dark:border-light  "
+            className=" ml-6 flex items-center justify-end rounded-full border-2 border-light dark:border-dark"
           >
             {mode === "dark" ? (
               <LightModeIcon className="animate-spin-slow" />
@@ -171,12 +179,9 @@ const NavBar = () => {
             )}
           </button>
         </nav>
-      </div>
+      </motion.div>
 
-
-
-
-
+   : null         }
 
       <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
