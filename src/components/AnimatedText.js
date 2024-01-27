@@ -27,7 +27,7 @@ const AnimatedText = ({ text, className = "" }) => {
 
     }
   return (
-    <div className=" w-full mx-auto flex py-2 justify-center items-center text-center overflow-hidden">
+    <div className=" w-full mx-auto flex py-2 justify-center items-center text-center overflow-hidden sm:py-0 ">
       {/* {text} */}
       <motion.h1
         className={` inline-block w-full font-bold capitalize text-5xl text-dark text-left dark:text-light  ${className}`}
