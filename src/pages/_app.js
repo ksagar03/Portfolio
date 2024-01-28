@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <main className=" font-montserrat bg-light w-full min-h-screen dark:bg-dark">
         <NavBar/>
+        
         <Component {...pageProps} />
         <Footer />
       </main>

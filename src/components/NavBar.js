@@ -55,6 +55,7 @@ const NavBar = () => {
   };
   
   return (
+    
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button
         onClick={handleClick}
@@ -128,8 +129,9 @@ const NavBar = () => {
 
 
 
-{  hamburgerMenu ? 
+{  hamburgerMenu ?
 
+<button onClick={() => setHamburgerMenu(!hamburgerMenu)} className="z-0 fixed  inset-0 w-full h-full cursor-default">
       <motion.div className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-24  text-light dark:text-dark "
       initial ={{scale:0, opacity:0, x:"-50%", y:"-50%"}}
       animate={{scale:1, opacity:1, transition:{duration:0.3, ease:easeInOut}}}
@@ -180,6 +182,7 @@ const NavBar = () => {
           </button>
         </nav>
       </motion.div>
+      </button>
 
    : null         }
 
