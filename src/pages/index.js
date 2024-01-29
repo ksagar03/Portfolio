@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import profile_pic from "/../Portfolio/public/images/profile/profile11.png";
+import profile_pic from "/public/images/profile/profile11.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 

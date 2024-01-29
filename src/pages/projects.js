@@ -5,9 +5,9 @@ import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
 import GitHub from '@mui/icons-material/GitHub'
-import gamer_freak from "/../Portfolio/public/images/projects/gamerFreak.png"
-import portfolio from "/../Portfolio/public/images/projects/portfolio.png"
-import Todolist from "/../Portfolio/public/images/projects/Todolist.png"
+import gamer_freak from "/public/images/projects/gamerFreak.png"
+import portfolio from "/public/images/projects/portfolio.png"
+import Todolist from "/public/images/projects/Todolist.png"
 
 import {motion} from "framer-motion"
 const FramerImage =motion(Image)
