@@ -131,9 +131,8 @@ const Projects = () => {
             title="Portfolio"
             img={portfolio}
             link="/"
-            type="showcasing my development journey " 
+            type="Showcasing My Development Journey " 
             githublink="https://github.com/ksagar03/Portfolio"
-
             />
           </div>
         </div>

@@ -35,9 +35,7 @@ const About = () => {
                 About me
               </h2>
               <p className=" font-medium">
-                Hi, I'm K Sagar, a Frontend web development enthusiast with a
-                passion for learning and implementing new libraries and frameworks in projects. My journey in the world of coding is fueled by a relentless curiosity and a drive to create seamless
-                and visually appealing user experiences.
+                {"Hi, I'm K Sagar, a Frontend web development enthusiast with a passion for learning and implementing new libraries and frameworks in projects. My journey in the world of coding is fueled by a relentless curiosity and a drive to create seamless and visually appealing user experiences."}
               </p>
               <p className=" my-4 font-medium">
                 I believe that proven knowledge carries the same weight as

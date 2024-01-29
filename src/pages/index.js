@@ -38,7 +38,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center   ">
                 <Link
-                  href="/Resume.pdf"
+                  href="/SagarKrishna-resume.pdf"
                   target="_blank"
                   className=" items-center p-2.5 px-5 rounded-lg text-lg bg-dark text-light font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light md:p-2 md:px-4 md:text-base sm:p-1.5 sm:px-2 sm:text-sm "
                   download={true}

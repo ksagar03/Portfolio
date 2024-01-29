@@ -86,7 +86,7 @@ const NavBar = () => {
         </nav>
         <nav className=" flex justify-items-center flex-wrap  ">
           <MotionLink
-            href="/"
+            href="https://github.com/ksagar03"
             target="_blank"
             className="mr-3"
             whileHover={{ y: -2 }}
@@ -95,7 +95,7 @@ const NavBar = () => {
             <GitHubIcon />
           </MotionLink>
           <MotionLink
-            href="/"
+            href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
             target="_blank"
             className="mx-3"
             whileHover={{ y: -2 }}
@@ -104,7 +104,7 @@ const NavBar = () => {
             <LinkedInIcon />
           </MotionLink>
           <MotionLink
-            href="/"
+            href="https://twitter.com/KSagar22"
             target="_blank"
             className="ml-3"
             whileHover={{ y: -2 }}
