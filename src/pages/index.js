@@ -29,12 +29,7 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText text="Bringing a website to life through coding." className="xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-3xl sm:text-xl " />
               <p className="my-4 text-base font-medium md:text-base sm:text-sm">
-                As a skilled Front end Developer, I intend to be part of an
-                organization where I can constantly develop and improve my
-                technical and management skills and make use of it for the
-                growth of the organization. I look forward to adapt latest
-                technical skills which will be useful for the growth of the
-                organization.
+              Enthusiast software engineer adept in frontend development and Google Cloud technologies with 2 years of proven success. Demonstrated ability in fast and self-learning, bringing innovative solutions to fruition. Eager to apply expertise to drive success in software engineering roles, contributing to the continuous growth and advancement of the team and company. Passionate about staying abreast of emerging technologies to ensure cutting-edge solutions.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center   ">
                 <Link

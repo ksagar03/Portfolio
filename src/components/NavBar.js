@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
-import { easeIn, easeInOut, motion } from "framer-motion";
+import { animate, delay, easeIn, easeInOut, motion } from "framer-motion";
 import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
@@ -80,11 +80,22 @@ const NavBar = () => {
       </button>
 
       <div className=" w-full flex justify-between items-center lg:hidden">
-        <nav>
+        <motion.nav
+          initial={{ y: -100, opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { delay: 0.4, },
+          }}
+        >
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects & Certificates " className="ml-4" />
-        </nav>
+          <CustomLink
+            href="/projects"
+            title="Projects & Certificates "
+            className="ml-4"
+          />
+        </motion.nav>
         <nav className=" flex justify-items-center flex-wrap  ">
           <MotionLink
             href="https://github.com/ksagar03"
