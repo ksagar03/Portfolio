@@ -19,8 +19,15 @@ module.exports = {
         primaryDark: "#58E6D9", // 80,230,217}
         yellowgreen: "#9acd32",
       },
+      keyframes: {
+        wiggle: {
+          "0%,100%": { transform: "rotate(-15deg)" },
+          "50%": { transform: "rotate(15deg)" },
+        },
+      },
       animation: {
         "spin-slow": "spin 8s linear infinite",
+        "wiggle": "wiggle 2s ease-in-out infinite",
       },
       backgroundImage: {
         circularLight:

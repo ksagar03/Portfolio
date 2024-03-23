@@ -9,6 +9,7 @@ import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
 import Todolist from "/public/images/projects/Todolist.png";
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
+import AnimeFreak from "public/images/projects/Animefreak.jpeg";
 import { motion } from "framer-motion";
 const FramerImage = motion(Image);
 
@@ -51,7 +52,7 @@ const Projects = () => {
               <Link
                 href={githublink}
                 target="_blank"
-                className=" w-10 hover:animate-pulse xs:text-sm "
+                className=" w-10 hover:animate-wiggle xs:text-sm "
               >
                 <GitHub sx={{ fontSize: "2.3rem" }} />
               </Link>
@@ -106,7 +107,7 @@ const Projects = () => {
             <Link
               href={githublink}
               target="_blank"
-              className=" w-10 hover:animate-bounce "
+              className=" w-10 hover:animate-wiggle "
             >
               <GitHub sx={{ fontSize: "2rem" }} />
             </Link>
@@ -160,7 +161,18 @@ const Projects = () => {
                 githublink="https://github.com/ksagar03/Portfolio"
               />
             </div>
-
+            <div className=" col-span-12">
+              <FeaturedProjects
+                title={"Anime freak"}
+                type={"Anime info web App(future OTT platform)"}
+                img={AnimeFreak}
+                summary={
+                  "As a die-hard fan of anime, I have created a web application that currently showcases information about anime. This application was developed using Next.js, Node.js, the Kitsu API, Tailwind CSS, and Framer Motion. I have also implemented an infinite scroll feature. In the future, I plan to expand this web application into an OTT platform where users can watch their favorite anime for free."
+                }
+                githublink="https://github.com/ksagar03/anime-freak"
+                link="https://anime-freak-zeta.vercel.app"
+              />
+            </div>
             <div className=" col-span-12">
               <FeaturedProjects
                 title={" Associate Google Cloud Certified "}
