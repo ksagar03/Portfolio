@@ -8,8 +8,9 @@ import GitHub from "@mui/icons-material/GitHub";
 import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
 import Todolist from "/public/images/projects/Todolist.png";
+import AnimeFreak from "/public/images/projects/AnimeFreak.png"
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
-import AnimeFreak from "/public/images/projects/Animefreak.jpeg";
+
 import { motion } from "framer-motion";
 const FramerImage = motion(Image);
 
