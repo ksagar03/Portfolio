@@ -8,7 +8,9 @@ const Details = ({
   companyLink,
   time,
   address,
-  workdetails,
+  workdetails1,
+  workdetails2,
+  workdetails3,
 }) => {
 
     const reference = useRef(null) 
@@ -45,7 +47,13 @@ const Details = ({
         <span className=" capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm ">
           {time} | {address}
         </span>
-        <p className=" font-medium w-full md:text-sm  ">{workdetails}</p>
+        <p className=" font-medium w-full md:text-sm  ">
+          <ul className=" list-disc">
+            <li>{workdetails1}</li>
+            {workdetails2 ?<li>{workdetails2}</li>:""}
+            {workdetails3 ? <li>{workdetails3}</li>: ""}
+          </ul>
+          </p>
       </motion.div>
     </li>
   );
@@ -73,7 +81,10 @@ const Experience = () => {
             companyLink="https://www.tcs.com"
             time="2021 - present"
             address="TCS Global Axis B & C Block"
-            workdetails="Have experience in Android and Linux based Automotive Testing for Advanced Driver Assistance Systems (ADAS) and In Vehicle Infotainment (IVI) features in Jaguar & Land Rover (JLR) project. Developed quality test cases for ADAS features using the Gherkin language."
+            workdetails1="Created a Python application to extract Android properties, SOMEIP APIs, and their Enum messages from JSON and Protobuf files. Resulted in a 3x faster development of Gherkin test cases and the ability to detect discrepancies in JSON and protobuf files."
+            workdetails2="Developed a Python automation script to download hundreds of latest Figma specs. These specs were utilized for training and creating an automation model through a plugin."
+            workdetails3="Developed quality test cases for ADAS features using the Gherkin programming language and have knowledge of Android Automotive system architecture.
+            "
           />
         </ul>
       </div>
