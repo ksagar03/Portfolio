@@ -8,7 +8,7 @@ import GitHub from "@mui/icons-material/GitHub";
 import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
 import Todolist from "/public/images/projects/Todolist.png";
-import AnimeFreak from "/public/images/projects/AnimeFreak.png"
+import AnimeFreak from "/public/images/projects/AnimeFreak.png";
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
 
 import { motion } from "framer-motion";
@@ -25,8 +25,13 @@ const Projects = () => {
     toshowgit = true,
   }) => {
     return (
-      <article className="w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg: lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
-        <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] sm:w-[101%] xs:rounded-[1.5rem]" />
+      <motion.article
+        initial={{ y: 100 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl dark:shadow-slate-300 dark:shadow-xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg: lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 "
+      >
+        {/* <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] sm:w-[101%] xs:rounded-[1.5rem]" /> */}
         <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
           <FramerImage
             src={img}
@@ -67,14 +72,19 @@ const Projects = () => {
             </Link>
           </div>
         </div>
-      </article>
+      </motion.article>
     );
   };
 
   const Project = ({ type, title, img, link, githublink }) => {
     return (
-      <article className=" w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl dark:bg-dark dark:border-light xs:p-4 ">
-        <div className="absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 sm:w-[101%] xs:h-[103%] xs:rounded-[1.5rem]" />
+      <motion.article
+        initial={{ y: 100 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl dark:shadow-slate-300 dark:shadow-xl dark:bg-dark dark:border-light xs:p-4 "
+      >
+        {/* <motion.div className=" absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 sm:w-[101%] xs:h-[103%] xs:rounded-[1.5rem]" /> */}
         <div className="overflow-hidden rounded-lg w-full">
           <FramerImage
             src={img}
@@ -114,7 +124,7 @@ const Projects = () => {
             </Link>
           </div>
         </div>
-      </article>
+      </motion.article>
     );
   };
   return (

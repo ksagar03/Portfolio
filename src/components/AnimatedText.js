@@ -14,8 +14,8 @@ const AnimatedText = ({ text, className = "" }) => {
     }
     const wordAnime ={
         initial:{
-            opacity:1,
-            y:50,
+            opacity:0.5,
+            y:100,
         }, 
         animate:{
             opacity:1,
