@@ -10,8 +10,9 @@ import portfolio from "/public/images/projects/portfolio.png";
 import Todolist from "/public/images/projects/Todolist.png";
 import AnimeFreak from "/public/images/projects/AnimeFreak.png";
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
+import PlinkoDemo from "/public/images/projects/PlinkoDemo.png"
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 const FramerImage = motion(Image);
 
 const Projects = () => {
@@ -28,7 +29,7 @@ const Projects = () => {
       <motion.article
         initial={{ y: 100 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: easeInOut }}
         className="w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl dark:shadow-slate-300 dark:shadow-xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg: lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 "
       >
         {/* <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] sm:w-[101%] xs:rounded-[1.5rem]" /> */}
@@ -81,7 +82,7 @@ const Projects = () => {
       <motion.article
         initial={{ y: 100 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: easeInOut }}
         className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl dark:shadow-slate-300 dark:shadow-xl dark:bg-dark dark:border-light xs:p-4 "
       >
         {/* <motion.div className=" absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 sm:w-[101%] xs:h-[103%] xs:rounded-[1.5rem]" /> */}
@@ -156,11 +157,11 @@ const Projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Todo-List"
-                img={Todolist}
-                link="https://todo-list-62d8f.web.app"
-                type=" Crud Operation NextJS Web Application"
-                githublink="https://github.com/ksagar03/todolist"
+                title="Plinko-Clone"
+                img={PlinkoDemo}
+                link="https://gambling-game.vercel.app"
+                type=" Online Gambling Game Demo"
+                githublink="https://github.com/ksagar03/gambling_game"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Skill = ({ name, x, y }) => {
