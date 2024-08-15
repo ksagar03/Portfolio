@@ -19,7 +19,7 @@ const About = () => {
           content="this page will be telling about my self"
         />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center dark:text-white ">
+      <main className="flex w-full flex-col z-10 items-center justify-center dark:text-white ">
         <Layout className="pt-16">
           <AnimatedText
             text="Crafting Code, Building Dreams."
@@ -46,7 +46,7 @@ const About = () => {
                 and proficiency in relevant skills. This is especially evident
                 through certifications like the Associate Cloud Engineer
                 Certification, as well as hands-on projects such as deploying an
-                e-commerce web application and a todo app, showcasing practical
+                e-commerce web application and an anime info application, showcasing practical
                 expertise in software engineering and development.
               </p>
             </motion.div>

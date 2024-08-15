@@ -55,6 +55,7 @@ const Skills = () => {
         <Skill name="GCP" x="-20vw" y="18vw" />
         <Skill name="Stripe" x="-29vw" y="-7vw" />
         <Skill name="Firebase" x="30vw" y="2vw" />
+        <Skill name="Vercel" x="20vw" y="-18vw" />
       </div>
     </>
   );

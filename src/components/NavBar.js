@@ -9,15 +9,17 @@ import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { useState } from "react";
+import RaindropEffect from "./RaindropEffect";
 
 const MotionLink = motion(Link);
 
-const NavBar = () => {
+const NavBar = ({handleThemeFunction}) => {
   const [mode, setMode] = useTheme(); // custom hook
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const handleClick = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
+  handleThemeFunction(()=> {return mode})
   const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
     return (
@@ -57,7 +59,10 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
+    <div>
+   
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-20 lg:px-16 md:px-12 sm:px-8">
+      
       <button
         onClick={handleClick}
         className=" flex-col justify-center items-center hidden lg:flex "
@@ -220,6 +225,8 @@ const NavBar = () => {
         <Logo />
       </div>
     </header>
+    </div>
+
   );
 };
 

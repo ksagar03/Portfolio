@@ -57,19 +57,19 @@ const Education = () => {
       </h2>
       <div ref={ref} className="w-full mx-auto relative">
         <motion.div style={{scaleY: scrollYProgress}} className=" absolute left-9 top-1 w-[5px] h-full bg-dark origin-top dark:bg-light md:w-[3px] md:left-[29px] xs:left-[19px] " />
-        <ul className="flex flex-col items-start w-full justify-between ml-4 xs:ml-2 ">
+        <ul className="flex flex-col w-full text-start ml-4 xs:ml-2 ">
           <Details
-            type="Bachelor Of Engineering Electronics and communication"
+            type="Bachelor Of Engineering in Electronics and communication"
             time="Jul.2017 - Aug.2021"
             place="Rajarajeswari  College  of  Engineering Bengaluru Karnataka"
           />
           <Details
-            type="12th (PCMC) "
+            type="12th (PCMC)"
             time="Jul.2016 - Aug.2017"
             place="Kendriya Vidyalaya Mysuru (CBSE)	Mysuru Karnataka"
           />
           <Details
-            type="10th "
+            type="10th"
             time="Jul.2014 - Aug.2015"
             place="Kendriya Vidyalaya Mysuru (CBSE)	Mysuru Karnataka"
           />
