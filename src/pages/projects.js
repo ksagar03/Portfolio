@@ -10,7 +10,8 @@ import portfolio from "/public/images/projects/portfolio.png";
 import Todolist from "/public/images/projects/Todolist.png";
 import AnimeFreak from "/public/images/projects/AnimeFreak.png";
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
-import PlinkoDemo from "/public/images/projects/PlinkoDemo.png"
+import PlinkoDemo from "/public/images/projects/PlinkoDemo.png";
+import ExpenseMateHome from "/public/images/projects/ExpenseMateHome.png";
 
 import { easeInOut, motion } from "framer-motion";
 const FramerImage = motion(Image);
@@ -47,7 +48,7 @@ const Projects = () => {
           />
         </div>
         <div className="w-1/2 flex flex-col items-start justify-between pl-6 text-dark dark:text-light lg:w-full lg:pl-0 lg:pt-6 ">
-          <span className=" text-blue-500 font-medium text-xl xs:text-base">
+          <span className=" text-blue-500 capitalize font-medium text-xl xs:text-base">
             {type}
           </span>
           <h2 className="underline underline-offset-[5px] my-2 w-full text-left text-3xl font-bold xs:text-lg">
@@ -147,14 +148,27 @@ const Projects = () => {
             <div className="col-span-12">
               {/* Featured Project */}
               <FeaturedProjects
-                title="Gamer Freak"
-                img={gamer_freak}
-                summary="Developed a full-stack E-commerce web application using React and Firebase, providing exciting features like payment processing, user authentication etc. In this project, I have used Firebase’s database to store user-ordered items and also used Stripe Payment element for payment processing. (React, Nodejs, Firebase, Express.js, Axios, Stripe, React context API and NoSQL)."
-                link="https://gamer-freak.web.app"
-                type="E-commerce Web Application"
-                githublink="https://github.com/ksagar03/gamer-freak"
+                title="ExpenseMate"
+                img={ExpenseMateHome}
+                summary="Developed a full-stack expense tracker application to simplify financial management and provide intuitive expense tracking. Built using Next.js, TypeScript, and MongoDB, the application ensures secure user authentication with NextAuth and supports CRUD operations for managing expenses. It features interactive data visualization with Recharts and a modern, responsive design styled with Tailwind CSS. Seamless animations powered by Framer Motion enhance the overall user experience."
+                link="https://expensemate-seven.vercel.app"
+                type="personal finance management project"
+                githublink="https://github.com/ksagar03/Expensemate"
               />
             </div>
+            <div className=" col-span-12">
+              <FeaturedProjects
+                title={"Anime freak"}
+                type={"Anime info web App(future OTT platform)"}
+                img={AnimeFreak}
+                summary={
+                  "As a die-hard fan of anime, I have created a web application that currently showcases information about anime. This application was developed using Next.js, Node.js, the Kitsu API, Tailwind CSS, and Framer Motion. I have also implemented an infinite scroll feature. In the future, I plan to expand this web application into an OTT platform where users can watch their favorite anime for free."
+                }
+                githublink="https://github.com/ksagar03/anime-freak"
+                link="https://anime-freak-zeta.vercel.app"
+              />
+            </div>
+
             <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Plinko-Clone"
@@ -173,18 +187,18 @@ const Projects = () => {
                 githublink="https://github.com/ksagar03/Portfolio"
               />
             </div>
-            <div className=" col-span-12">
+            <div className="col-span-12">
+              {/* Featured Project */}
               <FeaturedProjects
-                title={"Anime freak"}
-                type={"Anime info web App(future OTT platform)"}
-                img={AnimeFreak}
-                summary={
-                  "As a die-hard fan of anime, I have created a web application that currently showcases information about anime. This application was developed using Next.js, Node.js, the Kitsu API, Tailwind CSS, and Framer Motion. I have also implemented an infinite scroll feature. In the future, I plan to expand this web application into an OTT platform where users can watch their favorite anime for free."
-                }
-                githublink="https://github.com/ksagar03/anime-freak"
-                link="https://anime-freak-zeta.vercel.app"
+                title="Gamer Freak"
+                img={gamer_freak}
+                summary="Developed a full-stack E-commerce web application using React and Firebase, providing exciting features like payment processing, user authentication etc. In this project, I have used Firebase’s database to store user-ordered items and also used Stripe Payment element for payment processing. (React, Nodejs, Firebase, Express.js, Axios, Stripe, React context API and NoSQL)."
+                link="https://gamer-freak.web.app"
+                type="E-commerce Web Application"
+                githublink="https://github.com/ksagar03/gamer-freak"
               />
             </div>
+
             <div className=" col-span-12">
               <FeaturedProjects
                 title={" Associate Google Cloud Certified "}
