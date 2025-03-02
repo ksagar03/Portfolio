@@ -70,9 +70,9 @@ const Details = ({
         </span>
         <p className=" font-medium w-full md:text-sm  ">
           <ul className=" list-disc md:list-none">
-            {workdetails1.map((details,index)=>{
-              return <li key={index}>{details}</li>
-            } )}
+            {workdetails1.map((details, index) => {
+              return <li key={index}>{details}</li>;
+            })}
             {/* <li>{workdetails1}</li>
             {workdetails2 ? <li>{workdetails2}</li> : ""}
             {workdetails3 ? <li>{workdetails3}</li> : ""} */}
@@ -102,14 +102,18 @@ const Experience = () => {
         />
         <ul className="flex flex-col items-start w-full justify-between ml-4 xs:ml-2 ">
           <Details
-            position="System Engineer"
+            position="Android Developer (Jaguar Land Rover Client)"
             company="TATA Consultancy Services"
             companyLink="https://www.tcs.com"
             time="2021 - present"
             address="TCS Global Axis B & C Block"
-            workdetails1={["Created a Python application to extract Android properties, SOMEIP APIs, and their Enum messages from JSON and Protobuf files. Resulted in a 3x faster development of Gherkin test cases and the ability to detect discrepancies in JSON and protobuf files."
-           ,"Developed a Python automation script to download hundreds of latest Figma specs. These specs were utilized for training and creating an automation model through a plugin."
-            ,"Developed quality test cases for ADAS features using the Gherkin programming language and have knowledge of Android Automotive system architecture."]}
+            workdetails1={[
+              "Designed and developed Android Automotive features using Kotlin and Jetpack Compose, creating intuitive and responsive UI designs for in-vehicle infotainment systems.",
+              "Optimized Android Automotive functionalities to ensure seamless user interactions and efficient system performance.",
+              "Collaborated with cross-functional teams to design scalable solutions and troubleshoot issues during the development of Android Automotive features.",
+              "Developed a Python application to extract Android properties, SOMEIP APIs, and Enum messages from JSON and Protobuf files, improving Gherkin test case development speed by 200% and enabling early detection of data discrepancies.",
+              "Gained expertise in Android Automotive System Architecture, SOMEIP protocols, and ISO 26262 standards, ensuring compliance with functional safety requirements.",
+            ]}
           />
         </ul>
       </div>

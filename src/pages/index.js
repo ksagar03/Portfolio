@@ -17,21 +17,38 @@ export default function Home() {
         {/* <RaindropEffect /> */}
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className=" flex items-center justify-between w-full lg:flex-col">
-            <div className=" w-1/2 h-auto lg:hidden md:inline-block md:w-full
-            ">
-              <Image src={profile_pic} alt="" className="w-full h-auto"
-              priority
-              sizes="(max-width: 768px) 100vw,
+            <div
+              className=" w-1/2 h-auto lg:hidden md:inline-block md:w-full
+            "
+            >
+              <Image
+                src={profile_pic}
+                alt=""
+                className="w-full h-auto"
+                priority
+                sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw "
-
               />
               {/* this priority key will avoid the lazy load, preload the images */}
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
-              <AnimatedText text="Bringing a website to life through coding." className="xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-3xl sm:text-xl " />
+              <AnimatedText
+                text="Bringing a website to life through coding."
+                className="xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-3xl sm:text-xl "
+              />
               <p className="my-4 text-base font-medium md:text-base sm:text-sm">
-              Enthusiast software engineer adept in frontend development and Google Cloud technologies with 2.7 years of proven success. Demonstrated ability in fast and self-learning, bringing innovative solutions to fruition. Eager to apply expertise to drive success in software engineering roles, contributing to the continuous growth and advancement of the team and company. Passionate about staying abreast of emerging technologies to ensure cutting-edge solutions.
+                Innovative software developer with <b>3+</b> years of experience
+                specializing in <b>Android development</b>,{" "}
+                <b>full-stack web development</b>, and <b>cloud computing</b>.
+                Proficient in <b>Kotlin</b>, <b>Python</b>, <b>JavaScript</b>,{" "}
+                <b>React.js</b>, <b>Node.js</b>, and <b>Google Cloud</b>, with a
+                proven track record of delivering scalable and user-centric
+                solutions. Passionate about leveraging emerging technologies to
+                create intuitive and high-performance applications, from
+                in-vehicle infotainment systems to full-stack web platforms.
+                Eager to contribute to cutting-edge projects and drive
+                technological advancements in software engineering.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center   ">
                 <Link

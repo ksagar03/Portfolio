@@ -35,19 +35,32 @@ const About = () => {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/80 dark:text-white/80">
                 About me
               </h2>
-              <p className=" font-medium">
-                {
-                  "Hi, I'm K Sagar, a Frontend web development enthusiast with a passion for learning and implementing new libraries and frameworks in projects. My journey in the world of coding is fueled by a relentless curiosity and a drive to create seamless and visually appealing user experiences."
-                }
-              </p>
               <p className=" my-4 font-medium">
-                I believe that proven knowledge carries the same weight as
-                expected experience, as it demonstrates practical application
-                and proficiency in relevant skills. This is especially evident
-                through certifications like the Associate Cloud Engineer
-                Certification, as well as hands-on projects such as deploying an
-                e-commerce web application and an anime info application, showcasing practical
-                expertise in software engineering and development.
+                Hi, {"I’m K Sagar"}, a software developer with a strong
+                foundation in <b>Android development</b>,{" "}
+                <b>full-stack web development</b>, and{" "}
+                <b>cloud-based soultions</b>. My expertise spans across
+                <b>Kotlin</b>, <b>Jetpack Compose</b>, <b>React.js</b>,{" "}
+                <b>Next.js</b>, and <b>Firebase</b>,with hands-on experience in
+                building scalable and responsive applications.
+                <br />
+                <br />I thrive on solving complex problems and have successfully
+                developed Android Automotive features for in-vehicle
+                infotainment systems, optimized system performance, and built
+                full-stack applications like <b>ExpenseMate</b> and{" "}
+                <b>Anime Freak</b>. My work reflects a blend of creativity and
+                technical precision, ensuring seamless user experiences and
+                efficient system functionality.
+                <br />
+                <br />I hold an <b>Associate Google Cloud Certification</b> and
+                have a deep understanding of{" "}
+                <b>Android Automotive System Architecture</b>,<b>SOMEIP</b>{" "}
+                protocols, and <b>ISO 26262 standards</b>. My passion for
+                learning and implementing new technologies drives me to stay
+                ahead in the ever-evolving tech landscape. I believe in the
+                power of practical knowledge, as demonstrated through my
+                certifications and hands-on projects, which showcase my ability
+                to deliver impactful solutions.
               </p>
             </motion.div>
             <div className=" col-span-2 relative h-max rounded-2xl border-2 border-solid border-dark bg-white p-5 dark:border-white dark:bg-dark lg:col-span-3 md:col-span-4 md:order-1">
