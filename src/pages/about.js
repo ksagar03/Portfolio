@@ -54,7 +54,7 @@ const About = () => {
                 <br />
                 <br />I hold an <b>Associate Google Cloud Certification</b> and
                 have a deep understanding of{" "}
-                <b>Android Automotive System Architecture</b>,<b>SOMEIP</b>{" "}
+                <b>Android Automotive System Architecture</b>, <b>SOMEIP</b>{" "}
                 protocols, and <b>ISO 26262 standards</b>. My passion for
                 learning and implementing new technologies drives me to stay
                 ahead in the ever-evolving tech landscape. I believe in the

@@ -13,7 +13,7 @@ const Skill = ({ name, x, y }) => {
 
   return (
     <motion.div
-      className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark shadow-sm cursor-default absolute dark:text-dark dark:shadow-light dark:bg-light  lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-2.5  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold xs:shadow-none xs:dark:shadow-none md:text-[10px]"
+      className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark shadow-sm cursor-default absolute dark:text-dark dark:shadow-light dark:bg-light  lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-2.5  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold xs:shadow-none xs:dark:shadow-none md:text-[10px] sm:text-[8px]"
       whileHover={{ scale: 0.7, transition: { duration: 0.3 } }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
@@ -40,7 +40,7 @@ const Skills = () => {
     "
       >
         <motion.div
-          className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-6 shadow-dark shadow-sm cursor-pointer dark:bg-light dark:text-dark  lg:p-4 lg:text-sm md:text-xs md:p-3 sm:p-2 xs:text-[8px] "
+          className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-6 shadow-dark shadow-sm cursor-pointer dark:bg-light dark:text-dark  lg:p-4  md:p-3 sm:p-1 lg:text-sm md:text-xs sm:text-[8px] "
           whileHover={{ scale: 1.05 }}
         >
           Android / Web

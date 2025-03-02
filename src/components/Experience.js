@@ -8,8 +8,6 @@ const Details = ({
   time,
   address,
   workdetails1,
-  workdetails2,
-  workdetails3,
 }) => {
   const reference = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -69,13 +67,10 @@ const Details = ({
           {time} | {address}
         </span>
         <p className=" font-medium w-full md:text-sm  ">
-          <ul className=" list-disc md:list-none">
+          <ul className=" list-disc pl-5 md:pl-4">
             {workdetails1.map((details, index) => {
               return <li key={index}>{details}</li>;
             })}
-            {/* <li>{workdetails1}</li>
-            {workdetails2 ? <li>{workdetails2}</li> : ""}
-            {workdetails3 ? <li>{workdetails3}</li> : ""} */}
           </ul>
         </p>
       </motion.div>
