@@ -7,11 +7,12 @@ import Image from "next/image";
 import GitHub from "@mui/icons-material/GitHub";
 import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
-import Todolist from "/public/images/projects/Todolist.png";
+import SplitMoney from "/public/images/projects/SplitMoney.png";
 import AnimeFreak from "/public/images/projects/AnimeFreak.png";
 import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
 import PlinkoDemo from "/public/images/projects/PlinkoDemo.png";
 import ExpenseMateHome from "/public/images/projects/ExpenseMateHome.png";
+
 
 import { easeInOut, motion } from "framer-motion";
 const FramerImage = motion(Image);
@@ -25,6 +26,7 @@ const Projects = () => {
     link,
     githublink,
     toshowgit = true,
+    isdeployed = true
   }) => {
     return (
       <motion.article
@@ -70,7 +72,7 @@ const Projects = () => {
               target="_blank"
               className="ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:border-light dark:hover:bg-dark  sm:px-4 sm:text-base"
             >
-              {toshowgit ? "Visit Project" : "View Certificate"}
+              {toshowgit ? isdeployed ?  "Visit Project" : "Demo Video" : "View Certificate"}
             </Link>
           </div>
         </div>
@@ -145,14 +147,30 @@ const Projects = () => {
             className=" mb-12 lg:!text-6xl sm:mb-8 sm:!text-5xl xs:!text-4xl    "
           />
           <div className="grid grid-cols-12 gap-24 gap-y-25 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+
+            <div className="col-span-12">
+              <FeaturedProjects
+              title="Split Money(Android App)"
+              img={SplitMoney}
+              summary="Split Money is a mobile app designed to simplify group expense tracking. Users can create groups, add members, log shared expenses, and automatically calculate who owes what. The app features secure authentication using Firebase and a sleek, responsive UI built with Jetpack Compose. Firestore integration for real-time data sync is in progress."
+              link="https://www.linkedin.com/feed/update/urn:li:activity:7320822384913969152/"
+              type="Expense tracking and management"
+              githublink="https://github.com/ksagar03/SplitMoney"  
+              isdeployed ={false}
+              />
+
+            
+
+            </div>
             <div className="col-span-12">
               {/* Featured Project */}
+
               <FeaturedProjects
                 title="ExpenseMate"
                 img={ExpenseMateHome}
                 summary="Developed a full-stack expense tracker application to simplify financial management and provide intuitive expense tracking. Built using Next.js, TypeScript, and MongoDB, the application ensures secure user authentication with NextAuth and supports CRUD operations for managing expenses. It features interactive data visualization with Recharts and a modern, responsive design styled with Tailwind CSS. Seamless animations powered by Framer Motion enhance the overall user experience."
                 link="https://expensemate-seven.vercel.app"
-                type="personal finance management project"
+                type="Personal Finance Management Project"
                 githublink="https://github.com/ksagar03/Expensemate"
               />
             </div>
