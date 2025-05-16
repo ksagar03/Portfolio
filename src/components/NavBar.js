@@ -3,23 +3,26 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import XIcon from "@mui/icons-material/X";
 import { animate, delay, easeIn, easeInOut, motion } from "framer-motion";
 import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { useState } from "react";
-import RaindropEffect from "./RaindropEffect";
+import leetcodeDark from "../../public/SVGs/leetcode_Dark.svg";
+import leetcodeLight from "../../public/SVGs/leetcode_Light.svg";
+import Image from "next/image";
 
 const MotionLink = motion(Link);
 
-const NavBar = ({handleThemeFunction}) => {
+const NavBar = ({ handleThemeFunction }) => {
   const [mode, setMode] = useTheme(); // custom hook
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const handleClick = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
-  handleThemeFunction(()=> {return mode})
+  handleThemeFunction(() => {
+    return mode;
+  });
   const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
     return (
@@ -60,173 +63,178 @@ const NavBar = ({handleThemeFunction}) => {
 
   return (
     <div>
-   
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-20 lg:px-16 md:px-12 sm:px-8">
-      
-      <button
-        onClick={handleClick}
-        className=" flex-col justify-center items-center hidden lg:flex "
-      >
-        <span
-          className={` bg-dark dark:bg-light block transition duration-300 ease-in-out  h-0.5 w-6 rounded-sm  ${
-            hamburgerMenu ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-          }`}
-        ></span>
-        <span
-          className={` bg-dark dark:bg-light block transition duration-300 ease-in-out  h-0.5 w-6 rounded-sm my-0.5  ${
-            hamburgerMenu ? "opacity-0" : "opacity-100"
-          } `}
-        ></span>
-        <span
-          className={` bg-dark dark:bg-light block  transition duration-300 ease-in-out h-0.5 w-6 rounded-sm ${
-            hamburgerMenu ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-          } `}
-        ></span>
-      </button>
-
-      <div className=" w-full flex justify-between items-center lg:hidden">
-        <motion.nav
-          initial={{ y: -100, opacity: 0 }}
-          animate={{
-            y: 0,
-            opacity: 1,
-            transition: { delay: 0.4, },
-          }}
-        >
-          <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink
-            href="/projects"
-            title="Projects & Certificates "
-            className="ml-4"
-          />
-        </motion.nav>
-        <nav className=" flex justify-items-center flex-wrap  ">
-          <MotionLink
-            href="https://github.com/ksagar03"
-            target="_blank"
-            className="mr-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.3 }}
-          >
-            <GitHubIcon />
-          </MotionLink>
-          <MotionLink
-            href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
-            target="_blank"
-            className="mx-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.3 }}
-          >
-            <LinkedInIcon />
-          </MotionLink>
-          <MotionLink
-            href="https://twitter.com/KSagar22"
-            target="_blank"
-            className="ml-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.3 }}
-          >
-            <XIcon />
-          </MotionLink>
-
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className=" ml-6 flex items-center justify-end rounded-full border-2 border-dark dark:border-light  "
-          >
-            {mode === "dark" ? (
-              <LightModeIcon className="animate-spin-slow" />
-            ) : (
-              <NightsStayIcon className=" animate-pulse" />
-            )}
-          </button>
-        </nav>
-      </div>
-
-      {hamburgerMenu ? (
+      <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-20 lg:px-16 md:px-12 sm:px-8">
         <button
-          onClick={() => setHamburgerMenu(!hamburgerMenu)}
-          className="z-0 fixed  inset-0 w-full h-full cursor-default"
+          onClick={handleClick}
+          className=" flex-col justify-center items-center hidden lg:flex "
         >
-          <motion.div
-            className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-24  text-light dark:text-dark "
-            initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          <span
+            className={` bg-dark dark:bg-light block transition duration-300 ease-in-out  h-0.5 w-6 rounded-sm  ${
+              hamburgerMenu ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+            }`}
+          ></span>
+          <span
+            className={` bg-dark dark:bg-light block transition duration-300 ease-in-out  h-0.5 w-6 rounded-sm my-0.5  ${
+              hamburgerMenu ? "opacity-0" : "opacity-100"
+            } `}
+          ></span>
+          <span
+            className={` bg-dark dark:bg-light block  transition duration-300 ease-in-out h-0.5 w-6 rounded-sm ${
+              hamburgerMenu ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+            } `}
+          ></span>
+        </button>
+
+        <div className=" w-full flex justify-between items-center lg:hidden">
+          <motion.nav
+            initial={{ y: -100, opacity: 0 }}
             animate={{
-              scale: 1,
+              y: 0,
               opacity: 1,
-              transition: { duration: 0.3, ease: easeInOut },
+              transition: { delay: 0.4 },
             }}
           >
-            <nav className=" flex flex-col items-center justify-center">
-              <CustomMobileLink
-                href="/"
-                title="Home"
-                className=""
-                toggle={handleClick}
-              />
-              <CustomMobileLink
-                href="/about"
-                title="About"
-                className=""
-                toggle={handleClick}
-              />
-              <CustomMobileLink
-                href="/projects"
-                title="Projects "
-                className=""
-                toggle={handleClick}
-              />
-            </nav>
-            <nav className=" flex justify-items-center flex-wrap mt-4">
-              <MotionLink
-                href="https://github.com/ksagar03"
-                target="_blank"
-                className="mr-3"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.3 }}
-              >
-                <GitHubIcon />
-              </MotionLink>
-              <MotionLink
-                href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
-                target="_blank"
-                className="mx-3"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.3 }}
-              >
-                <LinkedInIcon />
-              </MotionLink>
-              <MotionLink
-                href="https://twitter.com/KSagar22"
-                target="_blank"
-                className="ml-3"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.3 }}
-              >
-                <XIcon />
-              </MotionLink>
+            <CustomLink href="/" title="Home" className="mr-4" />
+            <CustomLink href="/about" title="About" className="mx-4" />
+            <CustomLink
+              href="/projects"
+              title="Projects & Certificates "
+              className="ml-4"
+            />
+          </motion.nav>
+          <nav className=" flex justify-items-center flex-wrap  ">
+            <MotionLink
+              href="https://github.com/ksagar03"
+              target="_blank"
+              className="mr-3"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.3 }}
+            >
+              <GitHubIcon />
+            </MotionLink>
+            <MotionLink
+              href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
+              target="_blank"
+              className="mx-3"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.3 }}
+            >
+              <LinkedInIcon />
+            </MotionLink>
+            <MotionLink
+              href="https://leetcode.com/u/sagar2203/"
+              target="_blank"
+              className="ml-3"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.3 }}
+            >
+              {mode === "dark" ? (
+                <Image src={leetcodeLight} alt="Leetcode_L" />
+              ) : (
+                <Image src={leetcodeDark} alt="Leetcode_D" />
+              )}
+            </MotionLink>
 
-              <button
-                onClick={() => setMode(mode === "light" ? "dark" : "light")}
-                className=" ml-6 flex items-center justify-end rounded-full border-2 border-light dark:border-dark"
-              >
-                {mode === "dark" ? (
-                  <LightModeIcon className="animate-spin-slow" />
-                ) : (
-                  <NightsStayIcon className=" animate-pulse" />
-                )}
-              </button>
-            </nav>
-          </motion.div>
-        </button>
-      ) : null}
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className=" ml-6 flex items-center justify-end rounded-full border-2 border-dark dark:border-light  "
+            >
+              {mode === "dark" ? (
+                <LightModeIcon className="animate-spin-slow" />
+              ) : (
+                <NightsStayIcon className=" animate-pulse" />
+              )}
+            </button>
+          </nav>
+        </div>
 
-      <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div>
-    </header>
+        {hamburgerMenu ? (
+          <button
+            onClick={() => setHamburgerMenu(!hamburgerMenu)}
+            className="z-0 fixed  inset-0 w-full h-full cursor-default"
+          >
+            <motion.div
+              className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-24  text-light dark:text-dark "
+              initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 0.3, ease: easeInOut },
+              }}
+            >
+              <nav className=" flex flex-col items-center justify-center">
+                <CustomMobileLink
+                  href="/"
+                  title="Home"
+                  className=""
+                  toggle={handleClick}
+                />
+                <CustomMobileLink
+                  href="/about"
+                  title="About"
+                  className=""
+                  toggle={handleClick}
+                />
+                <CustomMobileLink
+                  href="/projects"
+                  title="Projects "
+                  className=""
+                  toggle={handleClick}
+                />
+              </nav>
+              <nav className=" flex justify-items-center flex-wrap mt-4">
+                <MotionLink
+                  href="https://github.com/ksagar03"
+                  target="_blank"
+                  className="mr-3"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.3 }}
+                >
+                  <GitHubIcon />
+                </MotionLink>
+                <MotionLink
+                  href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
+                  target="_blank"
+                  className="mx-3"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.3 }}
+                >
+                  <LinkedInIcon />
+                </MotionLink>
+                <MotionLink
+                  href="https://leetcode.com/u/sagar2203/"
+                  target="_blank"
+                  className="ml-3"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.3 }}
+                >
+                  {mode === "light" ? (
+                    <Image src={leetcodeLight} alt="Leetcode_L" />
+                  ) : (
+                    <Image src={leetcodeDark} alt="Leetcode_D" />
+                  )}
+                </MotionLink>
+
+                <button
+                  onClick={() => setMode(mode === "light" ? "dark" : "light")}
+                  className=" ml-6 flex items-center justify-end rounded-full border-2 border-light dark:border-dark"
+                >
+                  {mode === "dark" ? (
+                    <LightModeIcon className="animate-spin-slow" />
+                  ) : (
+                    <NightsStayIcon className=" animate-pulse" />
+                  )}
+                </button>
+              </nav>
+            </motion.div>
+          </button>
+        ) : null}
+
+        <div className=" absolute left-[50%] top-2 translate-x-[-50%]">
+          <Logo />
+        </div>
+      </header>
     </div>
-
   );
 };
 
