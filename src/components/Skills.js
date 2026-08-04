@@ -43,21 +43,21 @@ const Skills = () => {
           className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-6 shadow-dark shadow-sm cursor-pointer dark:bg-light dark:text-dark  lg:p-4  md:p-3 sm:p-1 lg:text-sm md:text-xs sm:text-[8px] "
           whileHover={{ scale: 1.05 }}
         >
-          Android / Web
+          Full Stack
         </motion.div>
         <Skill name="Typescript" x="2vw" y="-17vw"/>
         <Skill name="JavaScript" x="-1vw" y="-9vw" />
         <Skill name="Python" x="3vw" y="8.5vw" />
         <Skill name="Mongodb" x="15vw" y="-2vw"/>
-        <Skill name="CSS" x="18vw" y="-9vw" />
-        <Skill name="Stripe" x="-22vw" y="-2vw" />
-        <Skill name="HTML5" x="-18vw" y="8vw" />
-        <Skill name="React js" x="1vw" y="17vw" />
+        <Skill name="Spring Boot" x="18vw" y="-9vw" />
+        <Skill name="Kotlin" x="-22vw" y="-2vw" />
+        <Skill name="Node.js" x="-18vw" y="8vw" />
+        <Skill name="React.js" x="1vw" y="17vw" />
         <Skill name="Tailwind CSS" x="-20vw" y="-18vw" />
-        <Skill name="Next js" x="26vw" y="15vw" />
+        <Skill name="Next.js" x="26vw" y="15vw" />
         <Skill name="GCP" x="-20vw" y="18vw" />
-        <Skill name="Recharts" x="-35vw" y="7vw" />
-        <Skill name="NextAuth" x="-27vw" y="-9vw" />
+        <Skill name="Redis" x="-35vw" y="7vw" />
+        <Skill name="React Native" x="-27vw" y="-9vw" />
         <Skill name="Firebase" x="30vw" y="2vw" />
         <Skill name="Vercel" x="20vw" y="-18vw" />
       </div>

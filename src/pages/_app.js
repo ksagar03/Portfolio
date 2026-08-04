@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
-import { data } from "autoprefixer";
 import Head from "next/head";
 import { useState } from "react";
 import RaindropEffect from "@/components/RaindropEffect";

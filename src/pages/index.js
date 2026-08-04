@@ -34,21 +34,18 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Bringing a website to life through coding."
+                text="Building scalable systems, one line at a time."
                 className="xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-3xl sm:text-xl "
               />
               <p className="my-4 text-base font-medium md:text-base sm:text-sm">
-                Innovative software developer with <b>3+</b> years of experience
-                specializing in <b>Android development</b>,{" "}
-                <b>full-stack web development</b>, and <b>cloud computing</b>.
-                Proficient in <b>Kotlin</b>, <b>Python</b>, <b>JavaScript</b>,{" "}
-                <b>React.js</b>, <b>Node.js</b>, and <b>Google Cloud</b>, with a
-                proven track record of delivering scalable and user-centric
-                solutions. Passionate about leveraging emerging technologies to
-                create intuitive and high-performance applications, from
-                in-vehicle infotainment systems to full-stack web platforms.
-                Eager to contribute to cutting-edge projects and drive
-                technological advancements in software engineering.
+                Full Stack Developer with <b>4+</b> years of experience building
+                scalable backend systems and mobile applications. Currently at{" "}
+                <b>Accenture</b> developing banking microservices with{" "}
+                <b>Kotlin</b> and <b>Spring Boot</b>; previously at <b>TCS</b>{" "}
+                building Android Automotive features for{" "}
+                <b>Jaguar Land Rover</b>. Proficient in{" "}
+                <b>React</b>, <b>React Native</b>, <b>Node.js</b>, and cloud
+                technologies including <b>GCP</b> and <b>Firebase</b>.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center   ">
                 <Link

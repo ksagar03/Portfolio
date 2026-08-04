@@ -97,17 +97,28 @@ const Experience = () => {
         />
         <ul className="flex flex-col items-start w-full justify-between ml-4 xs:ml-2 ">
           <Details
+            position="Full Stack Developer (Banking Sector – Varo Project)"
+            company="Accenture"
+            companyLink="https://www.accenture.com"
+            time="Aug 2025 – Present"
+            address="Bengaluru, Karnataka"
+            workdetails1={[
+              "Developed and maintained backend microservices using Kotlin and Spring Boot for the cashback squad, enabling seamless integration of third-party vendor APIs to deliver secure cashback features.",
+              "Implemented gRPC for efficient inter-service communication within a microservice architecture and used SQL databases for reliable financial data persistence.",
+              "Collaborated with cross-functional teams in an Agile environment to deliver compliant, high-quality solutions in the banking domain.",
+            ]}
+          />
+          <Details
             position="Android Developer (Jaguar Land Rover Client)"
             company="TATA Consultancy Services"
             companyLink="https://www.tcs.com"
-            time="2021 - present"
+            time="Dec 2021 – Aug 2025"
             address="TCS Global Axis B & C Block"
             workdetails1={[
-              "Designed and developed Android Automotive features using Kotlin and Jetpack Compose, creating intuitive and responsive UI designs for in-vehicle infotainment systems.",
-              "Optimized Android Automotive functionalities to ensure seamless user interactions and efficient system performance.",
-              "Collaborated with cross-functional teams to design scalable solutions and troubleshoot issues during the development of Android Automotive features.",
-              "Developed a Python application to extract Android properties, SOMEIP APIs, and Enum messages from JSON and Protobuf files, improving Gherkin test case development speed by 200% and enabling early detection of data discrepancies.",
-              "Gained expertise in Android Automotive System Architecture, SOMEIP protocols, and ISO 26262 standards, ensuring compliance with functional safety requirements.",
+              "Developed Android Automotive features for ADAS settings using Kotlin, Jetpack Compose, and MVVM architecture.",
+              "Built scalable UI components using StateFlow and ViewModels for features such as Lane Keep Assist and Adaptive Cruise Control.",
+              "Improved application load time by approximately 25% through UI and state management optimizations.",
+              "Collaborated with cross-functional teams to design scalable solutions and troubleshoot issues during development.",
             ]}
           />
         </ul>

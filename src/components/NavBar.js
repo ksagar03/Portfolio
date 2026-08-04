@@ -208,7 +208,7 @@ const NavBar = ({ handleThemeFunction }) => {
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.3 }}
                 >
-                  {mode === "light" ? (
+                  {mode === "dark" ? (
                     <Image src={leetcodeLight} alt="Leetcode_L" />
                   ) : (
                     <Image src={leetcodeDark} alt="Leetcode_D" />
