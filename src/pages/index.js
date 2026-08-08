@@ -39,7 +39,7 @@ export default function Home() {
               />
               <p className="my-4 text-base font-medium md:text-base sm:text-sm">
                 Full Stack Developer with <b>4+</b> years of experience building
-                scalable backend systems and mobile applications. Currently at{" "}
+                scalable backend systems and Android Automotive and cross-platform mobile apps. Currently at{" "}
                 <b>Accenture</b> developing banking microservices with{" "}
                 <b>Kotlin</b> and <b>Spring Boot</b>; previously at <b>TCS</b>{" "}
                 building Android Automotive features for{" "}

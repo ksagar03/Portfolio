@@ -9,7 +9,6 @@ import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
 import SplitMoney from "/public/images/projects/SplitMoney.png";
 import AnimeFreak from "/public/images/projects/AnimeFreak.png";
-import google_certificate from "/public/images/projects/certificate/google_certificate.jpg";
 import PlinkoDemo from "/public/images/projects/PlinkoDemo.png";
 import ExpenseMateHome from "/public/images/projects/ExpenseMateHome.png";
 
@@ -217,19 +216,6 @@ const Projects = () => {
               />
             </div>
 
-            <div className=" col-span-12">
-              <FeaturedProjects
-                title={" Associate Google Cloud Certified "}
-                img={google_certificate}
-                summary={
-                  "I have acquired an Associate Google Cloud Certificate, obtaining hands-on experience with Google's platform tools. My knowledge extends to various aspects of cloud infrastructure, including building compute engines for diverse workloads. Additionally, I have gained insights into how Kubernetes facilitates auto-scaling and load balancing when required."
-                }
-                link={
-                  "https://www.credential.net/25924c9e-7c7c-44ca-abdd-fb8d3f0309d8?key=2f658a3ec45c70b5693c21ae4846679d062d58e18dd3865f34453ad3b0d942b2"
-                }
-                toshowgit={false}
-              />
-            </div>
           </div>
         </Layout>
       </main>
