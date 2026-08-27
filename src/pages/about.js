@@ -58,7 +58,7 @@ const About = () => {
                 <br />
                 My foundation in systems thinking comes from{" "}
                 <b>Android Automotive development</b> at <b>TCS</b> (Jaguar
-                Land Rover), where I built ADAS features like{" "}
+                Land Rover), where I worked on ADAS features including{" "}
                 <b>Lane Keep Assist</b> and <b>Adaptive Cruise Control</b>.
               </p>
             </motion.div>

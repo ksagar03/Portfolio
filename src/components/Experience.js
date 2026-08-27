@@ -115,10 +115,9 @@ const Experience = () => {
             time="Dec 2021 – Aug 2025"
             address="TCS Global Axis B & C Block"
             workdetails1={[
-              "Developed Android Automotive features for ADAS settings using Kotlin, Jetpack Compose, and MVVM architecture.",
+              "Performed functional testing on Android Automotive ADAS modules, actively reviewing the Kotlin codebase to understand the underlying MVVM architecture and data flow.",
               "Built scalable UI components using StateFlow and ViewModels for features such as Lane Keep Assist and Adaptive Cruise Control.",
-              "Improved application load time by approximately 25% through UI and state management optimizations.",
-              "Collaborated with cross-functional teams to design scalable solutions and troubleshoot issues during development.",
+              "Developed Android Automotive features for ADAS settings using Kotlin, Jetpack Compose, and MVVM architecture.",
             ]}
           />
         </ul>

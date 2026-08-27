@@ -5,6 +5,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import Image from "next/image";
 import GitHub from "@mui/icons-material/GitHub";
+import AndroidIcon from "@mui/icons-material/Android";
 import gamer_freak from "/public/images/projects/gamerFreak.png";
 import portfolio from "/public/images/projects/portfolio.png";
 import SplitMoney from "/public/images/projects/SplitMoney.png";
@@ -25,7 +26,8 @@ const Projects = () => {
     link,
     githublink,
     toshowgit = true,
-    isdeployed = true
+    isdeployed = true,
+    androidLink = null,
   }) => {
     return (
       <motion.article
@@ -56,7 +58,7 @@ const Projects = () => {
             {title}
           </h2>
           <p className="my-2 font-medium xs:text-xs md:text-sm">{summary}</p>
-          <div className=" mt-2 flex items-center ">
+          <div className=" mt-2 flex items-center flex-wrap gap-2 ">
             {toshowgit && (
               <Link
                 href={githublink}
@@ -71,8 +73,18 @@ const Projects = () => {
               target="_blank"
               className="ml-4 rounded-xl bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:border-light dark:hover:bg-dark  sm:px-4 sm:text-base"
             >
-              {toshowgit ? isdeployed ?  "Visit Project" : "Demo Video" : "View Certificate"}
+              {toshowgit ? isdeployed ? "Visit Project" : "Demo Video" : "View Certificate"}
             </Link>
+            {androidLink && (
+              <Link
+                href={androidLink}
+                target="_blank"
+                className="flex items-center gap-1.5 rounded-xl border-2 border-dark text-dark p-2 px-5 text-lg font-semibold hover:bg-dark hover:text-light hover:duration-500 dark:border-light dark:text-light dark:hover:bg-light dark:hover:text-dark sm:px-4 sm:text-base"
+              >
+                <AndroidIcon sx={{ fontSize: "1.4rem" }} />
+                Android Build
+              </Link>
+            )}
           </div>
         </div>
       </motion.article>
@@ -149,13 +161,14 @@ const Projects = () => {
 
             <div className="col-span-12">
               <FeaturedProjects
-              title="Split Money(Android App)"
+              title="Split Money"
               img={SplitMoney}
-              summary="Split Money is a mobile app designed to simplify group expense tracking. Users can create groups, add members, log shared expenses, and automatically calculate who owes what. The app features secure authentication using Firebase and a sleek, responsive UI built with Jetpack Compose. Firestore integration for real-time data sync is in progress."
-              link="https://www.linkedin.com/feed/update/urn:li:activity:7320822384913969152/"
-              type="Expense tracking and management"
-              githublink="https://github.com/ksagar03/SplitMoney"  
-              isdeployed ={false}
+              summary="A cross-platform group expense tracker built with React Native (Expo) and a Kotlin + Spring Boot backend, connected via a GraphQL API. Features JWT-based authentication, group creation, shared expense logging, net balance calculations with settlement suggestions (greedy algorithm), and shareable invite deep links that work even before a friend has signed up. Deployed on Vercel (frontend) and Render (backend)."
+              link="https://splitmoney-nine.vercel.app"
+              type="Full-Stack · React Native + Spring Boot + GraphQL"
+              githublink="https://github.com/ksagar03/splitmoney-frontend"
+              isdeployed={true}
+              androidLink="https://expo.dev/accounts/ksagar03/projects/splitMoney-frontend/builds/f0d93d1c-669f-4e56-9720-c0e6dd7760f4"
               />
 
             
