@@ -12,10 +12,22 @@ import SplitMoney from "/public/images/projects/SplitMoney.png";
 import AnimeFreak from "/public/images/projects/AnimeFreak.png";
 import PlinkoDemo from "/public/images/projects/PlinkoDemo.png";
 import ExpenseMateHome from "/public/images/projects/ExpenseMateHome.png";
-
+import { featuredProjects, simpleProjects } from "@/data/profile";
 
 import { easeInOut, motion } from "framer-motion";
 const FramerImage = motion(Image);
+
+// Next.js Image needs a static import (for build-time size/optimization),
+// so images stay imported above — this map just lets the data file refer
+// to them by a plain string key (`imgKey`).
+const projectImages = {
+  SplitMoney,
+  ExpenseMateHome,
+  AnimeFreak,
+  gamer_freak,
+  PlinkoDemo,
+  portfolio,
+};
 
 const Projects = () => {
   const FeaturedProjects = ({
@@ -36,7 +48,6 @@ const Projects = () => {
         transition={{ duration: 0.6, ease: easeInOut }}
         className="w-full flex items-center justify-between rounded-3xl border border-dark border-solid bg-light shadow-2xl dark:shadow-slate-300 dark:shadow-xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg: lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 "
       >
-        {/* <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] sm:w-[101%] xs:rounded-[1.5rem]" /> */}
         <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
           <FramerImage
             src={img}
@@ -99,7 +110,6 @@ const Projects = () => {
         transition={{ duration: 0.6, ease: easeInOut }}
         className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6 relative shadow-2xl dark:shadow-slate-300 dark:shadow-xl dark:bg-dark dark:border-light xs:p-4 "
       >
-        {/* <motion.div className=" absolute top-0 -right-3 -z-10 w-[102.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 sm:w-[101%] xs:h-[103%] xs:rounded-[1.5rem]" /> */}
         <div className="overflow-hidden rounded-lg w-full">
           <FramerImage
             src={img}
@@ -158,77 +168,17 @@ const Projects = () => {
             className=" mb-12 lg:!text-6xl sm:mb-8 sm:!text-5xl xs:!text-4xl    "
           />
           <div className="grid grid-cols-12 gap-24 gap-y-25 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            {featuredProjects.map((project, index) => (
+              <div className="col-span-12" key={index}>
+                <FeaturedProjects {...project} img={projectImages[project.imgKey]} />
+              </div>
+            ))}
 
-            <div className="col-span-12">
-              <FeaturedProjects
-              title="Split Money"
-              img={SplitMoney}
-              summary="A cross-platform group expense tracker built with React Native (Expo) and a Kotlin + Spring Boot backend, connected via a GraphQL API. Features JWT-based authentication, group creation, shared expense logging, net balance calculations with settlement suggestions (greedy algorithm), and shareable invite deep links that work even before a friend has signed up. Deployed on Vercel (frontend) and Render (backend)."
-              link="https://splitmoney-nine.vercel.app"
-              type="Full-Stack · React Native + Spring Boot + GraphQL"
-              githublink="https://github.com/ksagar03/splitmoney-frontend"
-              isdeployed={true}
-              androidLink="https://expo.dev/accounts/ksagar03/projects/splitMoney-frontend/builds/f0d93d1c-669f-4e56-9720-c0e6dd7760f4"
-              />
-
-            
-
-            </div>
-            <div className="col-span-12">
-              {/* Featured Project */}
-
-              <FeaturedProjects
-                title="ExpenseMate"
-                img={ExpenseMateHome}
-                summary="Developed a full-stack expense tracker application to simplify financial management and provide intuitive expense tracking. Built using Next.js, TypeScript, and MongoDB, the application ensures secure user authentication with NextAuth and supports CRUD operations for managing expenses. It features interactive data visualization with Recharts and a modern, responsive design styled with Tailwind CSS. Seamless animations powered by Framer Motion enhance the overall user experience."
-                link="https://expensemate-seven.vercel.app"
-                type="Personal Finance Management Project"
-                githublink="https://github.com/ksagar03/Expensemate"
-              />
-            </div>
-            <div className=" col-span-12">
-              <FeaturedProjects
-                title={"Anime freak"}
-                type={"Anime info web App(future OTT platform)"}
-                img={AnimeFreak}
-                summary={
-                  "As a die-hard fan of anime, I have created a web application that currently showcases information about anime. This application was developed using Next.js, Node.js, the Kitsu API, Tailwind CSS, and Framer Motion. I have also implemented an infinite scroll feature. In the future, I plan to expand this web application into an OTT platform where users can watch their favorite anime for free."
-                }
-                githublink="https://github.com/ksagar03/anime-freak"
-                link="https://anime-freak-zeta.vercel.app"
-              />
-            </div>
-
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Plinko-Clone"
-                img={PlinkoDemo}
-                link="https://gambling-game.vercel.app"
-                type=" Online Gambling Game Demo"
-                githublink="https://github.com/ksagar03/gambling_game"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Portfolio"
-                img={portfolio}
-                link="/"
-                type="Showcasing My DEV Journey "
-                githublink="https://github.com/ksagar03/Portfolio"
-              />
-            </div>
-            <div className="col-span-12">
-              {/* Featured Project */}
-              <FeaturedProjects
-                title="Gamer Freak"
-                img={gamer_freak}
-                summary="Developed a full-stack E-commerce web application using React and Firebase, providing exciting features like payment processing, user authentication etc. In this project, I have used Firebase’s database to store user-ordered items and also used Stripe Payment element for payment processing. (React, Nodejs, Firebase, Express.js, Axios, Stripe, React context API and NoSQL)."
-                link="https://gamer-freak.web.app"
-                type="E-commerce Web Application"
-                githublink="https://github.com/ksagar03/gamer-freak"
-              />
-            </div>
-
+            {simpleProjects.map((project, index) => (
+              <div className="col-span-6 sm:col-span-12" key={index}>
+                <Project {...project} img={projectImages[project.imgKey]} />
+              </div>
+            ))}
           </div>
         </Layout>
       </main>

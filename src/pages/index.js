@@ -4,6 +4,7 @@ import Image from "next/image";
 import profile_pic from "/public/images/profile/profile11.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
+import { personal, home } from "@/data/profile";
 // import RaindropEffect from "@/components/RaindropEffect";
 
 export default function Home() {
@@ -34,22 +35,16 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Building scalable systems, one line at a time."
+                text={home.heroText}
                 className="xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-3xl sm:text-xl "
               />
-              <p className="my-4 text-base font-medium md:text-base sm:text-sm">
-                Full Stack Developer with <b>4+</b> years of experience building
-                scalable backend systems and Android Automotive and cross-platform mobile apps. Currently at{" "}
-                <b>Accenture</b> developing banking microservices with{" "}
-                <b>Kotlin</b> and <b>Spring Boot</b>; previously at <b>TCS</b>{" "}
-                building Android Automotive features for{" "}
-                <b>Jaguar Land Rover</b>. Proficient in{" "}
-                <b>React</b>, <b>React Native</b>, <b>Node.js</b>, and cloud
-                technologies including <b>GCP</b> and <b>Firebase</b>.
-              </p>
+              <p
+                className="my-4 text-base font-medium md:text-base sm:text-sm"
+                dangerouslySetInnerHTML={{ __html: home.bioHtml }}
+              />
               <div className="flex items-center self-start mt-2 lg:self-center   ">
                 <Link
-                  href="/SagarKrishna-resume.pdf"
+                  href={personal.resumeUrl}
                   target="_blank"
                   className=" items-center p-2.5 px-5 rounded-lg text-lg bg-dark text-light font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:duration-500 dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light md:p-2 md:px-4 md:text-base sm:p-1.5 sm:px-2 sm:text-sm "
                   download={true}
@@ -57,7 +52,7 @@ export default function Home() {
                   Download CV
                 </Link>
                 <Link
-                  href="mailto:sagar22krishna03@gmail.com"
+                  href={`mailto:${personal.email}`}
                   target="_blank"
                   className=" items-center p-2.5 px-5 rounded-lg text-lg bg-dark text-light font-semibold ml-6 hover:bg-light hover:text-dark border-2 border-bold border-transparent hover:border-dark hover:duration-500  dark:bg-light dark:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light md:p-2 md:px-4 md:text-base sm:p-1.5 sm:px-2 sm:text-sm "
                 >

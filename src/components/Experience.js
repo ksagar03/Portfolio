@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
+import { experience } from "@/data/profile";
 
 const Details = ({
   position,
@@ -7,7 +8,7 @@ const Details = ({
   companyLink,
   time,
   address,
-  workdetails1,
+  workdetails,
 }) => {
   const reference = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -68,7 +69,7 @@ const Details = ({
         </span>
         <p className=" font-medium w-full md:text-sm  ">
           <ul className=" list-disc pl-5 md:pl-4">
-            {workdetails1.map((details, index) => {
+            {workdetails.map((details, index) => {
               return <li key={index}>{details}</li>;
             })}
           </ul>
@@ -96,30 +97,9 @@ const Experience = () => {
           className=" absolute left-9 top-1 w-[5px] h-full bg-dark origin-top dark:bg-light md:w-[3px] md:left-[29px] xs:left-[19px] "
         />
         <ul className="flex flex-col items-start w-full justify-between ml-4 xs:ml-2 ">
-          <Details
-            position="Full Stack Developer (Banking Sector – Varo Project)"
-            company="Accenture"
-            companyLink="https://www.accenture.com"
-            time="Aug 2025 – Present"
-            address="Bengaluru, Karnataka"
-            workdetails1={[
-              "Developed and maintained backend microservices using Kotlin and Spring Boot for the cashback squad, enabling seamless integration of third-party vendor APIs to deliver secure cashback features.",
-              "Implemented gRPC for efficient inter-service communication within a microservice architecture and used SQL databases for reliable financial data persistence.",
-              "Collaborated with cross-functional teams in an Agile environment to deliver compliant, high-quality solutions in the banking domain.",
-            ]}
-          />
-          <Details
-            position="Android Developer (Jaguar Land Rover Client)"
-            company="TATA Consultancy Services"
-            companyLink="https://www.tcs.com"
-            time="Dec 2021 – Aug 2025"
-            address="TCS Global Axis B & C Block"
-            workdetails1={[
-              "Performed functional testing on Android Automotive ADAS modules, actively reviewing the Kotlin codebase to understand the underlying MVVM architecture and data flow.",
-              "Built scalable UI components using StateFlow and ViewModels for features such as Lane Keep Assist and Adaptive Cruise Control.",
-              "Developed Android Automotive features for ADAS settings using Kotlin, Jetpack Compose, and MVVM architecture.",
-            ]}
-          />
+          {experience.map((job, index) => (
+            <Details key={index} {...job} />
+          ))}
         </ul>
       </div>
     </div>

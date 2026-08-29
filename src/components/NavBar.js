@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { animate, delay, easeIn, easeInOut, motion } from "framer-motion";
+import {easeInOut, motion } from "framer-motion";
 import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
@@ -11,6 +11,7 @@ import { useState } from "react";
 import leetcodeDark from "../../public/SVGs/leetcode_Dark.svg";
 import leetcodeLight from "../../public/SVGs/leetcode_Light.svg";
 import Image from "next/image";
+import { personal } from "@/data/profile";
 
 const MotionLink = motion(Link);
 
@@ -104,7 +105,7 @@ const NavBar = ({ handleThemeFunction }) => {
           </motion.nav>
           <nav className=" flex justify-items-center flex-wrap  ">
             <MotionLink
-              href="https://github.com/ksagar03"
+              href={personal.githubUrl}
               target="_blank"
               className="mr-3"
               whileHover={{ y: -2 }}
@@ -113,7 +114,7 @@ const NavBar = ({ handleThemeFunction }) => {
               <GitHubIcon />
             </MotionLink>
             <MotionLink
-              href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
+              href={personal.linkedinUrl}
               target="_blank"
               className="mx-3"
               whileHover={{ y: -2 }}
@@ -122,7 +123,7 @@ const NavBar = ({ handleThemeFunction }) => {
               <LinkedInIcon />
             </MotionLink>
             <MotionLink
-              href="https://leetcode.com/u/sagar2203/"
+              href={personal.leetcodeUrl}
               target="_blank"
               className="ml-3"
               whileHover={{ y: -2 }}
@@ -184,7 +185,7 @@ const NavBar = ({ handleThemeFunction }) => {
               </nav>
               <nav className=" flex justify-items-center flex-wrap mt-4">
                 <MotionLink
-                  href="https://github.com/ksagar03"
+                  href={personal.githubUrl}
                   target="_blank"
                   className="mr-3"
                   whileHover={{ y: -2 }}
@@ -193,7 +194,7 @@ const NavBar = ({ handleThemeFunction }) => {
                   <GitHubIcon />
                 </MotionLink>
                 <MotionLink
-                  href="http://www.linkedin.com/in/sagar-krishna-140bb421a"
+                  href={personal.linkedinUrl}
                   target="_blank"
                   className="mx-3"
                   whileHover={{ y: -2 }}
@@ -202,16 +203,16 @@ const NavBar = ({ handleThemeFunction }) => {
                   <LinkedInIcon />
                 </MotionLink>
                 <MotionLink
-                  href="https://leetcode.com/u/sagar2203/"
+                  href={personal.leetcodeUrl}
                   target="_blank"
                   className="ml-3"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.3 }}
                 >
                   {mode === "dark" ? (
-                    <Image src={leetcodeLight} alt="Leetcode_L" />
+                     <Image src={leetcodeDark} alt="Leetcode_D" />
                   ) : (
-                    <Image src={leetcodeDark} alt="Leetcode_D" />
+                    <Image src={leetcodeLight} alt="Leetcode_L" />
                   )}
                 </MotionLink>
 
