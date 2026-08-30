@@ -64,9 +64,9 @@ export const experience = [
     time: "Aug 2025 – Present",
     address: "Bengaluru, Karnataka",
     workdetails: [
-      "Developed and maintained backend microservices using Kotlin and Spring Boot for the cashback squad, enabling seamless integration of third-party vendor APIs to deliver secure cashback features.",
-      "Implemented gRPC for efficient inter-service communication within a microservice architecture and used SQL databases for reliable financial data persistence.",
-      "Collaborated with cross-functional teams in an Agile environment to deliver compliant, high-quality solutions in the banking domain.",
+      "Developed and maintained backend microservices using Kotlin, Spring Boot, and Docker for the cashback squad, integrating vendor APIs and Kafka event streaming, plus a React Native feature carousel for the cashback screen.",
+      "Implemented gRPC for inter-service communication, using an internal Spring Security plugin to extract customer context from RPC metadata, and SQL databases for financial data persistence.",
+      "Engineered a cron-scheduled batch pipeline to backfill zip codes for 7.5M users, using Kotlin Coroutines for controlled concurrency and a circuit breaker to fast-fail on vendor API failures.",
     ],
   },
   {
