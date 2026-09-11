@@ -22,15 +22,15 @@ export const personal = {
 export const home = {
   heroText: "Building scalable systems, one line at a time.",
   bioHtml:
-    "Full Stack Developer with <b>4+</b> years of experience building scalable backend systems and Android Automotive and cross-platform mobile apps. Currently at <b>Accenture</b> developing banking microservices with <b>Kotlin</b> and <b>Spring Boot</b>; previously at <b>TCS</b> building Android Automotive features for <b>Jaguar Land Rover</b>. Proficient in <b>React</b>, <b>React Native</b>, <b>Node.js</b>, and cloud technologies including <b>GCP</b> and <b>Firebase</b>.",
+    "Full-stack engineer with <b>nearly 5 years</b> of experience building production backend services and cross-platform frontends. Currently shipping <b>Kotlin</b>/<b>Spring Boot</b> microservices (gRPC, Kafka, PostgreSQL) and <b>React Native</b> screens at <b>Accenture</b> for a 6.5M-customer US digital bank; previously at <b>TCS</b> building Android Automotive features for <b>Jaguar Land Rover</b>. Comfortable owning features from schema to pixels.",
 };
 
 export const about = {
   heading: "Crafting Code, Building Dreams.",
   bioHtml:
-    "Hi, I'm Sagar K — a Full Stack Developer with a backend-first mindset who enjoys building clean, well-structured systems that scale. At <b>Accenture</b>, I build banking microservices using <b>Kotlin</b> and <b>Spring Boot</b> — designing <b>gRPC</b>-based inter-service communication, integrating third-party vendor APIs, and shipping secure, compliant features in an Agile team." +
+    "Hi, I'm Sagar K — a Full Stack Developer with a backend-first mindset who enjoys building clean, well-structured systems that scale. At <b>Accenture</b>, I own the cashback service end to end for a <b>6.5M-customer</b> US digital bank — building the vendor-API integration, <b>Kafka</b> event flow, and a <b>React Native</b> carousel, plus <b>gRPC</b>-based inter-service communication secured via an internal <b>Spring Security</b> plugin. I also backfilled zip codes for <b>7.5M users</b> through a cron pipeline (7,500 users/10-min run) with bounded Kotlin-coroutine concurrency and a circuit breaker — completed in 7 days with zero production incidents — and architected a <b>BDD testing framework</b> using Kotlin, <b>Cucumber</b>, and Koin dependency injection." +
     "<br/><br/>" +
-    "My web stack spans <b>React.js</b>, <b>Next.js</b>, and <b>Node.js</b>. I also have hands-on experience with <b>React Native</b> — at Accenture I built a feature carousel on the cashback screen, and I am applying that further in <b>Split Money</b>, a cross-platform group expense app I am currently building with a Spring Boot + GraphQL backend. <b>ExpenseMate</b>, another personal project, is a full-stack Next.js expense tracker where I cut API response times by ~40–50% with Redis caching." +
+    "My web stack spans <b>React.js</b>, <b>Next.js</b>, and <b>Node.js</b>. I'm applying my React Native experience further in <b>Split Money</b>, a cross-platform group expense app I'm currently building with a Spring Boot + GraphQL backend. <b>ExpenseMate</b>, another personal project, is a full-stack Next.js expense tracker where I cut API response times by ~40–50% with Redis caching." +
     "<br/><br/>" +
     "My foundation in systems thinking comes from <b>Android Automotive development</b> at <b>TCS</b> (Jaguar Land Rover), where I worked on ADAS features including <b>Lane Keep Assist</b> and <b>Adaptive Cruise Control</b>.",
 };
@@ -39,21 +39,24 @@ export const about = {
 export const skillsCenterLabel = "Full Stack";
 
 export const skills = [
-  { name: "Typescript", x: "2vw", y: "-17vw" },
-  { name: "JavaScript", x: "-1vw", y: "-9vw" },
-  { name: "Python", x: "3vw", y: "8.5vw" },
-  { name: "Mongodb", x: "15vw", y: "-2vw" },
-  { name: "Spring Boot", x: "18vw", y: "-9vw" },
-  { name: "Kotlin", x: "-22vw", y: "-2vw" },
-  { name: "Node.js", x: "-18vw", y: "8vw" },
-  { name: "React.js", x: "1vw", y: "17vw" },
-  { name: "Tailwind CSS", x: "-20vw", y: "-18vw" },
-  { name: "Next.js", x: "26vw", y: "15vw" },
-  { name: "GCP", x: "-20vw", y: "18vw" },
-  { name: "Redis", x: "-35vw", y: "7vw" },
-  { name: "React Native", x: "-27vw", y: "-9vw" },
-  { name: "Firebase", x: "30vw", y: "2vw" },
-  { name: "Vercel", x: "20vw", y: "-18vw" },
+  { name: "Kotlin", x: "13vw", y: "0vw" },
+  { name: "Spring Boot", x: "10vw", y: "8.3vw" },
+  { name: "React Native", x: "2.2vw", y: "12.7vw" },
+  { name: "React.js", x: "-6.5vw", y: "11.3vw" },
+  { name: "Next.js", x: "-12.2vw", y: "4.4vw" },
+  { name: "Node.js", x: "-12.2vw", y: "-4.4vw" },
+  { name: "TypeScript", x: "-6.5vw", y: "-11.3vw" },
+  { name: "GraphQL", x: "2.2vw", y: "-12.7vw" },
+  { name: "gRPC", x: "10vw", y: "-8.3vw" },
+  { name: "JavaScript", x: "25.4vw", y: "9.2vw" },
+  { name: "Kafka", x: "13.5vw", y: "23.5vw" },
+  { name: "Docker", x: "-4.7vw", y: "26.6vw" },
+  { name: "Spring Security", x: "-20.8vw", y: "17.3vw" },
+  { name: "PostgreSQL", x: "-27vw", y: "0vw" },
+  { name: "Redis", x: "-20.8vw", y: "-17.3vw" },
+  { name: "Python", x: "-4.7vw", y: "-26.6vw" },
+  { name: "GCP", x: "13.5vw", y: "-23.5vw" },
+  { name: "Firebase", x: "25.4vw", y: "-9.2vw" },
 ];
 
 export const experience = [
@@ -64,9 +67,10 @@ export const experience = [
     time: "Aug 2025 – Present",
     address: "Bengaluru, Karnataka",
     workdetails: [
-      "Developed and maintained backend microservices using Kotlin, Spring Boot, and Docker for the cashback squad, integrating vendor APIs and Kafka event streaming, plus a React Native feature carousel for the cashback screen.",
+      "Own the cashback service end to end at a 6.5M-customer US digital bank — built the vendor-API integration, Kafka event flow, and React Native carousel.",
       "Implemented gRPC for inter-service communication, using an internal Spring Security plugin to extract customer context from RPC metadata, and SQL databases for financial data persistence.",
-      "Engineered a cron-scheduled batch pipeline to backfill zip codes for 7.5M users, using Kotlin Coroutines for controlled concurrency and a circuit breaker to fast-fail on vendor API failures.",
+      "Backfilled zip codes for 7.5M users via a cron pipeline processing 7,500 users per 10-minute run — bounded Kotlin-coroutine concurrency capped vendor load, and a circuit breaker fast-failed on outages. Completed in 7 days, zero production incidents.",
+      "Architected an automated BDD testing framework using Kotlin, Cucumber, and Koin dependency injection to validate high-level scenarios, wiring Apollo GraphQL and gRPC integration clients to test downstream microservices.",
     ],
   },
   {
@@ -76,9 +80,8 @@ export const experience = [
     time: "Dec 2021 – Aug 2025",
     address: "TCS Global Axis B & C Block",
     workdetails: [
-      "Performed functional testing on Android Automotive ADAS modules, actively reviewing the Kotlin codebase to understand the underlying MVVM architecture and data flow.",
-      "Built scalable UI components using StateFlow and ViewModels for features such as Lane Keep Assist and Adaptive Cruise Control.",
-      "Developed Android Automotive features for ADAS settings using Kotlin, Jetpack Compose, and MVVM architecture.",
+      "Built scalable UI components with Kotlin, Jetpack Compose, StateFlow, and ViewModels for Android Automotive ADAS features (Lane Keep Assist, Adaptive Cruise Control) using MVVM.",
+      "Performed functional testing on Android Automotive ADAS modules using Gherkin.",
     ],
   },
 ];
