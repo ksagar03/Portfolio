@@ -22,13 +22,13 @@ export const personal = {
 export const home = {
   heroText: "Building scalable systems, one line at a time.",
   bioHtml:
-    "Full-stack engineer with <b>nearly 5 years</b> of experience building production backend services and cross-platform frontends. Currently shipping <b>Kotlin</b>/<b>Spring Boot</b> microservices (gRPC, Kafka, PostgreSQL) and <b>React Native</b> screens at <b>Accenture</b> for a 6.5M-customer US digital bank; previously at <b>TCS</b> building Android Automotive features for <b>Jaguar Land Rover</b>. Comfortable owning features from schema to pixels.",
+    "Full-stack engineer with <b>nearly 5 years</b> of experience building production backend services and cross-platform frontends. Currently shipping <b>Kotlin</b>/<b>Spring Boot</b> microservices (gRPC, Kafka, PostgreSQL, AWS) and <b>React Native</b> screens at <b>Accenture</b> for a 6.5M-customer US digital bank; previously at <b>TCS</b> building Android Automotive features for <b>Jaguar Land Rover</b>. Comfortable owning features from schema to pixels.",
 };
 
 export const about = {
   heading: "Crafting Code, Building Dreams.",
   bioHtml:
-    "Hi, I'm Sagar K — a Full Stack Developer with a backend-first mindset who enjoys building clean, well-structured systems that scale. At <b>Accenture</b>, I own the cashback service end to end for a <b>6.5M-customer</b> US digital bank — building the vendor-API integration, <b>Kafka</b> event flow, and a <b>React Native</b> carousel, plus <b>gRPC</b>-based inter-service communication secured via an internal <b>Spring Security</b> plugin. I also backfilled zip codes for <b>7.5M users</b> through a cron pipeline (7,500 users/10-min run) with bounded Kotlin-coroutine concurrency and a circuit breaker — completed in 7 days with zero production incidents — and architected a <b>BDD testing framework</b> using Kotlin, <b>Cucumber</b>, and Koin dependency injection." +
+    "Hi, I'm Sagar K — a Full Stack Developer with a backend-first mindset who enjoys building clean, well-structured systems that scale. At <b>Accenture</b>, I own the cashback service end to end for a <b>6.5M-customer</b> US digital bank — building the vendor-API integration, an <b>AWS SQS</b> consumer that confirms a customer earned an offer before payout is released, the <b>Kafka</b> event flow, and a <b>React Native</b> carousel, plus <b>gRPC</b>-based inter-service communication secured via an internal <b>Spring Security</b> plugin. I also backfilled zip codes for <b>7.5M users</b> through a cron pipeline (7,500 users/10-min run) with bounded Kotlin-coroutine concurrency and a circuit breaker — completed in 7 days with zero production incidents — and architected a <b>BDD testing framework</b> using Kotlin, <b>Cucumber</b>, and Koin dependency injection. On the data side I built a config-driven <b>ETL</b> pipeline on <b>AWS</b>, landing date-partitioned extracts in <b>S3</b> for third-party vendors with <b>CloudWatch</b> monitors on job health." +
     "<br/><br/>" +
     "My web stack spans <b>React.js</b>, <b>Next.js</b>, and <b>Node.js</b>. I'm applying my React Native experience further in <b>Split Money</b>, a cross-platform group expense app I'm currently building with a Spring Boot + GraphQL backend. <b>ExpenseMate</b>, another personal project, is a full-stack Next.js expense tracker where I cut API response times by ~40–50% with Redis caching." +
     "<br/><br/>" +
@@ -55,33 +55,34 @@ export const skills = [
   { name: "PostgreSQL", x: "-27vw", y: "0vw" },
   { name: "Redis", x: "-20.8vw", y: "-17.3vw" },
   { name: "Python", x: "-4.7vw", y: "-26.6vw" },
-  { name: "GCP", x: "13.5vw", y: "-23.5vw" },
+  { name: "AWS", x: "13.5vw", y: "-23.5vw" },
   { name: "Firebase", x: "25.4vw", y: "-9.2vw" },
 ];
 
 export const experience = [
   {
-    position: "Full Stack Developer (Banking Sector – Varo Project)",
+    position: "Senior Software Engineer — Full-Stack Developer (Banking Sector – Varo Project)",
     company: "Accenture",
     companyLink: "https://www.accenture.com",
     time: "Aug 2025 – Present",
     address: "Bengaluru, Karnataka",
     workdetails: [
-      "Own the cashback service end to end at a 6.5M-customer US digital bank — built the vendor-API integration, Kafka event flow, and React Native carousel.",
-      "Implemented gRPC for inter-service communication, using an internal Spring Security plugin to extract customer context from RPC metadata, and SQL databases for financial data persistence.",
+      "Own the cashback service end to end at a 6.5M-customer US digital bank — built the vendor-API integration, an AWS SQS consumer that confirms a customer earned an offer before payout is released, the Kafka event flow, and the React Native carousel.",
+      "Implemented gRPC for inter-service communication, using an internal Spring Security plugin to extract customer context from RPC metadata, and PostgreSQL for financial data persistence.",
       "Backfilled zip codes for 7.5M users via a cron pipeline processing 7,500 users per 10-minute run — bounded Kotlin-coroutine concurrency capped vendor load, and a circuit breaker fast-failed on outages. Completed in 7 days, zero production incidents.",
-      "Architected an automated BDD testing framework using Kotlin, Cucumber, and Koin dependency injection to validate high-level scenarios, wiring Apollo GraphQL and gRPC integration clients to test downstream microservices.",
+      "Built a config-driven ETL pipeline on AWS — scheduled multi-table extracts land as date-partitioned objects in S3 for third-party vendors, with CloudWatch monitors on job health and Athena for ad-hoc queries.",
+      "Architected an automated BDD testing framework using Kotlin, Cucumber, and Koin dependency injection, wiring Apollo GraphQL and gRPC integration clients to test downstream microservices against live environments; unit coverage in JUnit with Mockito, delivered through GitLab CI.",
     ],
   },
   {
-    position: "Android Developer (Jaguar Land Rover Client)",
+    position: "Systems Engineer — Android Automotive (Jaguar Land Rover client)",
     company: "TATA Consultancy Services",
     companyLink: "https://www.tcs.com",
     time: "Dec 2021 – Aug 2025",
-    address: "TCS Global Axis B & C Block",
+    address: "Bengaluru, Karnataka",
     workdetails: [
-      "Built scalable UI components with Kotlin, Jetpack Compose, StateFlow, and ViewModels for Android Automotive ADAS features (Lane Keep Assist, Adaptive Cruise Control) using MVVM.",
-      "Performed functional testing on Android Automotive ADAS modules using Gherkin.",
+      "Shipped production Kotlin into vehicles: ADAS features (Lane Keep Assist, Adaptive Cruise Control) in a safety-critical domain, built on coroutines and StateFlow for asynchronous state handling, on an MVVM architecture with Jetpack Compose.",
+      "Verified shipped ADAS modules with Gherkin-driven functional testing; built automation tooling that won the TCS Innovation Super Star award (Dec 2024).",
     ],
   },
 ];
