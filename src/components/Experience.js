@@ -67,13 +67,13 @@ const Details = ({
         <span className=" capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm ">
           {time} | {address}
         </span>
-        <p className=" font-medium w-full md:text-sm  ">
+        <div className=" font-medium w-full md:text-sm  ">
           <ul className=" list-disc pl-5 md:pl-4">
             {workdetails.map((details, index) => {
               return <li key={index}>{details}</li>;
             })}
           </ul>
-        </p>
+        </div>
       </motion.div>
     </li>
   );

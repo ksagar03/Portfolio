@@ -2,14 +2,17 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
 import Head from "next/head";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import RaindropEffect from "@/components/RaindropEffect";
 // import { theme } from "../../tailwind.config";
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState()
-  const Theme = (value) => {
+  // Stable reference (via useCallback) so NavBar's effect that reports the
+  // current theme up doesn't re-fire every render just because this
+  // function got recreated.
+  const Theme = useCallback((value) => {
     setTheme(value)
-  }
+  }, [])
   // console.log(theme)
   return (
     <>

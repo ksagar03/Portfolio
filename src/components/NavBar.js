@@ -7,7 +7,7 @@ import {easeInOut, motion } from "framer-motion";
 import useTheme from "./CustomHooks/useTheme";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import leetcodeDark from "../../public/SVGs/leetcode_Dark.svg";
 import leetcodeLight from "../../public/SVGs/leetcode_Light.svg";
 import Image from "next/image";
@@ -21,9 +21,14 @@ const NavBar = ({ handleThemeFunction }) => {
   const handleClick = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
-  handleThemeFunction(() => {
-    return mode;
-  });
+  // Report the current theme up to _app.js — must run in an effect, not
+  // directly in the render body, since calling a parent's setState while
+  // this component is rendering triggers React's "Cannot update a component
+  // while rendering a different component" warning and forces a redundant
+  // extra render of the whole app on every render.
+  useEffect(() => {
+    handleThemeFunction(() => mode);
+  }, [mode, handleThemeFunction]);
   const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
     return (
@@ -155,7 +160,7 @@ const NavBar = ({ handleThemeFunction }) => {
             className="z-0 fixed  inset-0 w-full h-full cursor-default"
           >
             <motion.div
-              className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/90 dark:bg-light/90 rounded-lg backdrop-blur-md py-24  text-light dark:text-dark "
+              className=" min-w-[70vw] flex flex-col justify-between items-center z-10 fixed top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 bg-dark/95 dark:bg-light/95 rounded-lg py-24  text-light dark:text-dark "
               initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
               animate={{
                 scale: 1,

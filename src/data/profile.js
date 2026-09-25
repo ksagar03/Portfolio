@@ -38,25 +38,44 @@ export const about = {
 // Center label + orbiting skill nodes for the Skills component.
 export const skillsCenterLabel = "Full Stack";
 
+// Grouped into 3 rings by label length, shortest-innermost — a flat "N nodes
+// evenly spaced on one ring" layout collides badly once labels have uneven
+// widths (e.g. "React Native" vs "Kotlin"), since ring spacing only accounts
+// for angle, not actual pill width. Ring radius grows outward specifically
+// so the longest labels land where there's the most room.
+//
+// Each ring is an ELLIPSE (wider x-radius than y-radius), not a circle —
+// the container is `w-full h-screen`, and on a typical laptop (16:9 or
+// wider) the viewport is much wider than it is tall, so a "circle" sized
+// using the same vw value for both x and y comfortably fits horizontally
+// but overshoots the container's actual height vertically, pushing
+// high-|y| nodes outside the visible background pattern.
 export const skills = [
-  { name: "Kotlin", x: "13vw", y: "0vw" },
-  { name: "Spring Boot", x: "10vw", y: "8.3vw" },
-  { name: "React Native", x: "2.2vw", y: "12.7vw" },
-  { name: "React.js", x: "-6.5vw", y: "11.3vw" },
-  { name: "Next.js", x: "-12.2vw", y: "4.4vw" },
-  { name: "Node.js", x: "-12.2vw", y: "-4.4vw" },
-  { name: "TypeScript", x: "-6.5vw", y: "-11.3vw" },
-  { name: "GraphQL", x: "2.2vw", y: "-12.7vw" },
-  { name: "gRPC", x: "10vw", y: "-8.3vw" },
-  { name: "JavaScript", x: "25.4vw", y: "9.2vw" },
-  { name: "Kafka", x: "13.5vw", y: "23.5vw" },
-  { name: "Docker", x: "-4.7vw", y: "26.6vw" },
-  { name: "Spring Security", x: "-20.8vw", y: "17.3vw" },
-  { name: "PostgreSQL", x: "-27vw", y: "0vw" },
-  { name: "Redis", x: "-20.8vw", y: "-17.3vw" },
-  { name: "Python", x: "-4.7vw", y: "-26.6vw" },
-  { name: "AWS", x: "13.5vw", y: "-23.5vw" },
-  { name: "Firebase", x: "25.4vw", y: "-9.2vw" },
+  // Ring 1 (rx=12vw, ry=8vw) — short labels
+  { name: "Kotlin", x: "12vw", y: "0vw" },
+  { name: "gRPC", x: "6vw", y: "6.9vw" },
+  { name: "AWS", x: "-6vw", y: "6.9vw" },
+  { name: "Docker", x: "-12vw", y: "0vw" },
+  { name: "Kafka", x: "-6vw", y: "-6.9vw" },
+  { name: "Redis", x: "6vw", y: "-6.9vw" },
+  // Ring 2 (rx=24vw, ry=14vw) — medium labels
+  { name: "Node.js", x: "20.8vw", y: "7vw" },
+  { name: "Firebase", x: "0vw", y: "14vw" },
+  { name: "Python", x: "-20.8vw", y: "7vw" },
+  { name: "JavaScript", x: "-20.8vw", y: "-7vw" },
+  { name: "React.js", x: "0vw", y: "-14vw" },
+  { name: "Next.js", x: "20.8vw", y: "-7vw" },
+  // Ring 3 (rx=30vw, ry=18vw) — longest labels. rx is deliberately smaller
+  // than you'd expect from a 36vw ring — the container isn't actually
+  // 100vw wide (the page Layout adds horizontal padding, ~80% usable
+  // width in practice), so rx needs real margin below that, not just
+  // below 50vw.
+  { name: "React Native", x: "29vw", y: "4.7vw" },
+  { name: "Spring Boot", x: "7.8vw", y: "17.4vw" },
+  { name: "Spring Security", x: "-21.2vw", y: "12.7vw" },
+  { name: "PostgreSQL", x: "-29vw", y: "-4.7vw" },
+  { name: "TypeScript", x: "-7.8vw", y: "-17.4vw" },
+  { name: "GraphQL", x: "21.2vw", y: "-12.7vw" },
 ];
 
 export const experience = [
